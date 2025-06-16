@@ -1,0 +1,17 @@
+Z:\C# Big\C# project\C#_project 1\C#_project 1\obj\Debug\UnicomTICManagementSystem.csproj.AssemblyReference.cache
+Z:\C# Big\C# project\C#_project 1\C#_project 1\obj\Debug\C__project_1.Properties.Resources.resources
+Z:\C# Big\C# project\C#_project 1\C#_project 1\obj\Debug\C__project_1.Views.LoginForm.resources
+Z:\C# Big\C# project\C#_project 1\C#_project 1\obj\Debug\UnicomTICManagementSystem.csproj.GenerateResource.cache
+Z:\C# Big\C# project\C#_project 1\C#_project 1\obj\Debug\UnicomTICManagementSystem.csproj.CoreCompileInputs.cache
+Z:\C# Big\C# project\C#_project 1\C#_project 1\obj\Debug\C#_project 1.exe
+Z:\C# Big\C# project\C#_project 1\C#_project 1\obj\Debug\C#_project 1.pdb
+Z:\C# Big\C# project\C#_project 1\C#_project 1\bin\Debug\C#_project 1.exe.config
+Z:\C# Big\C# project\C#_project 1\C#_project 1\bin\Debug\C#_project 1.exe
+Z:\C# Big\C# project\C#_project 1\C#_project 1\bin\Debug\C#_project 1.pdb
+Z:\C# Big\C# project\C#_project 1\C#_project 1\bin\Debug\System.Data.SQLite.dll
+Z:\C# Big\C# project\C#_project 1\C#_project 1\bin\Debug\System.Data.SQLite.xml
+Z:\C# Big\C# project\C#_project 1\C#_project 1\obj\Debug\UnicomTI.449BFD41.Up2Date
+Z:\C# Big\C# project\C#_project 1\C#_project 1\obj\Debug\C__project_1.viwes.DashBoard.resources
+Z:\C# Big\C# project\C#_project 1\C#_project 1\obj\Debug\C__project_1.viwes.Student.resources
+Z:\C# Big\C# project\C#_project 1\C#_project 1\obj\Debug\C__project_1.viwes.Admin.resources
+Z:\C# Big\C# project\C#_project 1\C#_project 1\obj\Debug\C__project_1.viwes.Staff.resources
