@@ -21,5 +21,10 @@ namespace C__project_1.viwes
         {
 
         }
+
+        private void btn_add_letc_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

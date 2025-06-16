@@ -47,27 +47,30 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(240, 60);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(200, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 16);
+            this.label1.Size = new System.Drawing.Size(128, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "LectureName";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(240, 105);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(200, 97);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 16);
+            this.label2.Size = new System.Drawing.Size(83, 22);
             this.label2.TabIndex = 1;
             this.label2.Text = "Address";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(240, 149);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(200, 147);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 16);
+            this.label3.Size = new System.Drawing.Size(109, 22);
             this.label3.TabIndex = 2;
             this.label3.Text = "NICnumber";
             // 
@@ -95,7 +98,7 @@
             // dgv_lecturer
             // 
             this.dgv_lecturer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_lecturer.Location = new System.Drawing.Point(223, 225);
+            this.dgv_lecturer.Location = new System.Drawing.Point(177, 224);
             this.dgv_lecturer.Name = "dgv_lecturer";
             this.dgv_lecturer.RowHeadersWidth = 51;
             this.dgv_lecturer.RowTemplate.Height = 24;
@@ -104,47 +107,57 @@
             // 
             // btn_add_letc
             // 
-            this.btn_add_letc.Location = new System.Drawing.Point(223, 390);
+            this.btn_add_letc.BackColor = System.Drawing.Color.IndianRed;
+            this.btn_add_letc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add_letc.Location = new System.Drawing.Point(177, 390);
             this.btn_add_letc.Name = "btn_add_letc";
-            this.btn_add_letc.Size = new System.Drawing.Size(75, 23);
+            this.btn_add_letc.Size = new System.Drawing.Size(75, 38);
             this.btn_add_letc.TabIndex = 9;
             this.btn_add_letc.Text = "Add";
-            this.btn_add_letc.UseVisualStyleBackColor = true;
+            this.btn_add_letc.UseVisualStyleBackColor = false;
+            this.btn_add_letc.Click += new System.EventHandler(this.btn_add_letc_Click);
             // 
             // btn_update_lect
             // 
-            this.btn_update_lect.Location = new System.Drawing.Point(332, 390);
+            this.btn_update_lect.BackColor = System.Drawing.Color.IndianRed;
+            this.btn_update_lect.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_update_lect.Location = new System.Drawing.Point(282, 390);
             this.btn_update_lect.Name = "btn_update_lect";
-            this.btn_update_lect.Size = new System.Drawing.Size(75, 23);
+            this.btn_update_lect.Size = new System.Drawing.Size(84, 38);
             this.btn_update_lect.TabIndex = 10;
             this.btn_update_lect.Text = "Update";
-            this.btn_update_lect.UseVisualStyleBackColor = true;
+            this.btn_update_lect.UseVisualStyleBackColor = false;
             // 
             // btn_delete_lect
             // 
-            this.btn_delete_lect.Location = new System.Drawing.Point(435, 390);
+            this.btn_delete_lect.BackColor = System.Drawing.Color.IndianRed;
+            this.btn_delete_lect.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delete_lect.Location = new System.Drawing.Point(395, 390);
             this.btn_delete_lect.Name = "btn_delete_lect";
-            this.btn_delete_lect.Size = new System.Drawing.Size(75, 23);
+            this.btn_delete_lect.Size = new System.Drawing.Size(75, 38);
             this.btn_delete_lect.TabIndex = 11;
             this.btn_delete_lect.Text = "Delete";
-            this.btn_delete_lect.UseVisualStyleBackColor = true;
+            this.btn_delete_lect.UseVisualStyleBackColor = false;
             // 
             // btn_backletc
             // 
-            this.btn_backletc.Location = new System.Drawing.Point(535, 390);
+            this.btn_backletc.BackColor = System.Drawing.Color.IndianRed;
+            this.btn_backletc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_backletc.Location = new System.Drawing.Point(493, 390);
             this.btn_backletc.Name = "btn_backletc";
-            this.btn_backletc.Size = new System.Drawing.Size(75, 23);
+            this.btn_backletc.Size = new System.Drawing.Size(75, 38);
             this.btn_backletc.TabIndex = 12;
             this.btn_backletc.Text = "Back";
-            this.btn_backletc.UseVisualStyleBackColor = true;
+            this.btn_backletc.UseVisualStyleBackColor = false;
             this.btn_backletc.Click += new System.EventHandler(this.button4_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(243, 185);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(200, 183);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 16);
+            this.label4.Size = new System.Drawing.Size(74, 22);
             this.label4.TabIndex = 13;
             this.label4.Text = "subject";
             // 
@@ -159,7 +172,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.Gray;
+            this.ClientSize = new System.Drawing.Size(753, 450);
             this.Controls.Add(this.txt_ltec_sub);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btn_backletc);
