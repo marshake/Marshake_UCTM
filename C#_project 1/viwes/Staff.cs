@@ -129,5 +129,10 @@ namespace C__project_1.viwes
                 }
             }
         }
+
+        private void Staff_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

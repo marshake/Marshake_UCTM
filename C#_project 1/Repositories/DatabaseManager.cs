@@ -81,7 +81,8 @@ namespace UnicomTICManagementSystem.Repositories
                     Id INTEGER PRIMARY KEY AUTOINCREMENT,
                     Name TEXT NOT NULL,
                     Address TEXT NOT NULL,
-                    NIC TEXT NOT NULL
+                    NIC TEXT NOT NULL,
+                    FOREIGN KEY(course_id) REFERENCES Courses(course_id)
                     );
                 ";
 

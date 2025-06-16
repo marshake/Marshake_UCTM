@@ -39,32 +39,41 @@
             this.btn_add = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_update = new System.Windows.Forms.Button();
+            this.txt_course = new System.Windows.Forms.Label();
+            this.back_student = new System.Windows.Forms.Button();
+            this.cmb_coure = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.student_grw)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(100, 59);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(149, 78);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 13);
+            this.label1.Size = new System.Drawing.Size(130, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "StudentName";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(383, 219);
+            this.label2.Location = new System.Drawing.Point(511, 270);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 13);
+            this.label2.Size = new System.Drawing.Size(0, 16);
             this.label2.TabIndex = 1;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(100, 105);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(149, 125);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 13);
+            this.label4.Size = new System.Drawing.Size(152, 22);
             this.label4.TabIndex = 3;
             this.label4.Text = "StudentAddress";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -72,49 +81,59 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(100, 152);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(149, 166);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 13);
+            this.label5.Size = new System.Drawing.Size(109, 22);
             this.label5.TabIndex = 4;
             this.label5.Text = "NICnumber";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // txt_studentname
             // 
-            this.txt_studentname.Location = new System.Drawing.Point(224, 56);
+            this.txt_studentname.Location = new System.Drawing.Point(314, 78);
+            this.txt_studentname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_studentname.Name = "txt_studentname";
-            this.txt_studentname.Size = new System.Drawing.Size(221, 20);
+            this.txt_studentname.Size = new System.Drawing.Size(293, 22);
             this.txt_studentname.TabIndex = 5;
             // 
             // txt_studentAddress
             // 
-            this.txt_studentAddress.Location = new System.Drawing.Point(224, 102);
+            this.txt_studentAddress.Location = new System.Drawing.Point(314, 125);
+            this.txt_studentAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_studentAddress.Name = "txt_studentAddress";
-            this.txt_studentAddress.Size = new System.Drawing.Size(221, 20);
+            this.txt_studentAddress.Size = new System.Drawing.Size(293, 22);
             this.txt_studentAddress.TabIndex = 7;
             // 
             // txt_studentNIC
             // 
-            this.txt_studentNIC.Location = new System.Drawing.Point(224, 145);
+            this.txt_studentNIC.Location = new System.Drawing.Point(314, 168);
+            this.txt_studentNIC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_studentNIC.Name = "txt_studentNIC";
-            this.txt_studentNIC.Size = new System.Drawing.Size(221, 20);
+            this.txt_studentNIC.Size = new System.Drawing.Size(293, 22);
             this.txt_studentNIC.TabIndex = 9;
             // 
             // student_grw
             // 
             this.student_grw.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.student_grw.GridColor = System.Drawing.Color.White;
-            this.student_grw.Location = new System.Drawing.Point(41, 191);
+            this.student_grw.Location = new System.Drawing.Point(88, 244);
+            this.student_grw.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.student_grw.Name = "student_grw";
-            this.student_grw.Size = new System.Drawing.Size(440, 150);
+            this.student_grw.RowHeadersWidth = 51;
+            this.student_grw.Size = new System.Drawing.Size(618, 185);
             this.student_grw.TabIndex = 10;
             this.student_grw.SelectionChanged += new System.EventHandler(this.student_grw_SelectionChanged);
             // 
             // btn_add
             // 
             this.btn_add.BackColor = System.Drawing.Color.Teal;
-            this.btn_add.Location = new System.Drawing.Point(75, 347);
+            this.btn_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add.Location = new System.Drawing.Point(153, 449);
+            this.btn_add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(75, 23);
+            this.btn_add.Size = new System.Drawing.Size(100, 28);
             this.btn_add.TabIndex = 11;
             this.btn_add.Text = "Add";
             this.btn_add.UseVisualStyleBackColor = false;
@@ -123,9 +142,11 @@
             // btn_delete
             // 
             this.btn_delete.BackColor = System.Drawing.Color.Teal;
-            this.btn_delete.Location = new System.Drawing.Point(308, 347);
+            this.btn_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delete.Location = new System.Drawing.Point(423, 449);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(75, 23);
+            this.btn_delete.Size = new System.Drawing.Size(100, 28);
             this.btn_delete.TabIndex = 12;
             this.btn_delete.Text = "delete";
             this.btn_delete.UseVisualStyleBackColor = false;
@@ -134,19 +155,56 @@
             // btn_update
             // 
             this.btn_update.BackColor = System.Drawing.Color.Teal;
-            this.btn_update.Location = new System.Drawing.Point(188, 347);
+            this.btn_update.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_update.Location = new System.Drawing.Point(289, 449);
+            this.btn_update.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(75, 23);
+            this.btn_update.Size = new System.Drawing.Size(100, 28);
             this.btn_update.TabIndex = 13;
             this.btn_update.Text = "update";
             this.btn_update.UseVisualStyleBackColor = false;
             this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
+            // txt_course
+            // 
+            this.txt_course.AutoSize = true;
+            this.txt_course.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_course.Location = new System.Drawing.Point(149, 213);
+            this.txt_course.Name = "txt_course";
+            this.txt_course.Size = new System.Drawing.Size(74, 22);
+            this.txt_course.TabIndex = 14;
+            this.txt_course.Text = "Course";
+            // 
+            // back_student
+            // 
+            this.back_student.BackColor = System.Drawing.Color.Teal;
+            this.back_student.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.back_student.Location = new System.Drawing.Point(540, 448);
+            this.back_student.Name = "back_student";
+            this.back_student.Size = new System.Drawing.Size(90, 28);
+            this.back_student.TabIndex = 16;
+            this.back_student.Text = "back";
+            this.back_student.UseVisualStyleBackColor = false;
+            this.back_student.Click += new System.EventHandler(this.back_student_Click);
+            // 
+            // cmb_coure
+            // 
+            this.cmb_coure.FormattingEnabled = true;
+            this.cmb_coure.Location = new System.Drawing.Point(314, 213);
+            this.cmb_coure.Name = "cmb_coure";
+            this.cmb_coure.Size = new System.Drawing.Size(293, 24);
+            this.cmb_coure.TabIndex = 17;
+            this.cmb_coure.SelectedIndexChanged += new System.EventHandler(this.cmb_coure_SelectedIndexChanged);
+            // 
             // Student
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(662, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.ClientSize = new System.Drawing.Size(762, 536);
+            this.Controls.Add(this.cmb_coure);
+            this.Controls.Add(this.back_student);
+            this.Controls.Add(this.txt_course);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_add);
@@ -158,6 +216,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Student";
             this.Text = "Student";
             this.Load += new System.EventHandler(this.Student_Load);
@@ -180,5 +239,8 @@
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_update;
+        private System.Windows.Forms.Label txt_course;
+        private System.Windows.Forms.Button back_student;
+        private System.Windows.Forms.ComboBox cmb_coure;
     }
 }

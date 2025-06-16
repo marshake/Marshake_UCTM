@@ -13,6 +13,7 @@ namespace C__project_1.Models
         public string Name { get; set; }
         public string Address { get; set; }
         public string NIC { get; set; }
+        public string CourseId { get; set; }
         
     }
 }

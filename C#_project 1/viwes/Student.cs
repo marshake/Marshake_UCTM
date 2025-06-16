@@ -26,6 +26,12 @@ namespace C__project_1.viwes
             InitializeComponent();
             StudentController controller = new StudentController();
             student_grw.DataSource = controller.GetAllStudents();
+            cmb_coure.Items.Clear();
+            cmb_coure.Items.Add("BSC Maths");
+            cmb_coure.Items.Add("BSC Chemistry");
+            cmb_coure.Items.Add("IT");
+            cmb_coure.Items.Add("English");
+            cmb_coure.SelectedIndex = 0;
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
@@ -147,6 +153,26 @@ namespace C__project_1.viwes
                     }
                 }
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void back_student_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmb_coure_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

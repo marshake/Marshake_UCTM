@@ -16,5 +16,10 @@ namespace C__project_1.viwes
         {
             InitializeComponent();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

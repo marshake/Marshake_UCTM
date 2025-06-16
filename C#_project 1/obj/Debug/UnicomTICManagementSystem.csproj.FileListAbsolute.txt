@@ -15,3 +15,21 @@ Z:\C# Big\C# project\C#_project 1\C#_project 1\obj\Debug\C__project_1.viwes.Dash
 Z:\C# Big\C# project\C#_project 1\C#_project 1\obj\Debug\C__project_1.viwes.Student.resources
 Z:\C# Big\C# project\C#_project 1\C#_project 1\obj\Debug\C__project_1.viwes.Admin.resources
 Z:\C# Big\C# project\C#_project 1\C#_project 1\obj\Debug\C__project_1.viwes.Staff.resources
+C:\Users\user\Desktop\C# project\C#_project 1\Marshake_UCTM\C#_project 1\bin\Debug\C#_project 1.exe.config
+C:\Users\user\Desktop\C# project\C#_project 1\Marshake_UCTM\C#_project 1\bin\Debug\C#_project 1.exe
+C:\Users\user\Desktop\C# project\C#_project 1\Marshake_UCTM\C#_project 1\bin\Debug\C#_project 1.pdb
+C:\Users\user\Desktop\C# project\C#_project 1\Marshake_UCTM\C#_project 1\bin\Debug\System.Data.SQLite.dll
+C:\Users\user\Desktop\C# project\C#_project 1\Marshake_UCTM\C#_project 1\bin\Debug\System.Data.SQLite.xml
+C:\Users\user\Desktop\C# project\C#_project 1\Marshake_UCTM\C#_project 1\obj\Debug\UnicomTICManagementSystem.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\C# project\C#_project 1\Marshake_UCTM\C#_project 1\obj\Debug\C#_project 1.exe.config
+C:\Users\user\Desktop\C# project\C#_project 1\Marshake_UCTM\C#_project 1\obj\Debug\C__project_1.Properties.Resources.resources
+C:\Users\user\Desktop\C# project\C#_project 1\Marshake_UCTM\C#_project 1\obj\Debug\C__project_1.Views.LoginForm.resources
+C:\Users\user\Desktop\C# project\C#_project 1\Marshake_UCTM\C#_project 1\obj\Debug\C__project_1.viwes.Admin.resources
+C:\Users\user\Desktop\C# project\C#_project 1\Marshake_UCTM\C#_project 1\obj\Debug\C__project_1.viwes.DashBoard.resources
+C:\Users\user\Desktop\C# project\C#_project 1\Marshake_UCTM\C#_project 1\obj\Debug\C__project_1.viwes.Staff.resources
+C:\Users\user\Desktop\C# project\C#_project 1\Marshake_UCTM\C#_project 1\obj\Debug\C__project_1.viwes.Student.resources
+C:\Users\user\Desktop\C# project\C#_project 1\Marshake_UCTM\C#_project 1\obj\Debug\UnicomTICManagementSystem.csproj.GenerateResource.cache
+C:\Users\user\Desktop\C# project\C#_project 1\Marshake_UCTM\C#_project 1\obj\Debug\UnicomTICManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\C# project\C#_project 1\Marshake_UCTM\C#_project 1\obj\Debug\UnicomTI.449BFD41.Up2Date
+C:\Users\user\Desktop\C# project\C#_project 1\Marshake_UCTM\C#_project 1\obj\Debug\C#_project 1.exe
+C:\Users\user\Desktop\C# project\C#_project 1\Marshake_UCTM\C#_project 1\obj\Debug\C#_project 1.pdb
