@@ -81,8 +81,23 @@ namespace UnicomTICManagementSystem.Repositories
                     Id INTEGER PRIMARY KEY AUTOINCREMENT,
                     Name TEXT NOT NULL,
                     Address TEXT NOT NULL,
+                    NIC TEXT NOT NULL
+                    
+                    );
+                    CREATE TABLE IF NOT EXISTS Lecturer (
+                    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    Name TEXT NOT NULL,
+                    Address TEXT NOT NULL,
                     NIC TEXT NOT NULL,
-                    FOREIGN KEY(course_id) REFERENCES Courses(course_id)
+                    subject_id INTEGER,
+                    FOREIGN KEY(subject_id) REFERENCES Subjects(subject_id)
+                     );
+                    
+                   CREATE TABLE IF NOT EXISTS Teachers (
+                    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    Name TEXT NOT NULL,
+                    Address TEXT NOT NULL,
+                     NIC TEXT NOT NULL
                     );
                 ";
 
