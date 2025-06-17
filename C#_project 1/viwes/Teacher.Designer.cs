@@ -148,6 +148,7 @@
             this.btn_back_tec.TabIndex = 12;
             this.btn_back_tec.Text = "Back";
             this.btn_back_tec.UseVisualStyleBackColor = false;
+            this.btn_back_tec.Click += new System.EventHandler(this.btn_back_tec_Click);
             // 
             // Teacher
             // 

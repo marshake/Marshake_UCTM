@@ -1,5 +1,6 @@
 ﻿using C__project_1.Controler;
 using C__project_1.Controllers;
+using C__project_1.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -133,6 +134,13 @@ namespace C__project_1.viwes
         private void Staff_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_back_stf_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
         }
     }
 }

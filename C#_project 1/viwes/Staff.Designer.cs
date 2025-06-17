@@ -151,6 +151,7 @@
             this.btn_back_stf.TabIndex = 12;
             this.btn_back_stf.Text = "back";
             this.btn_back_stf.UseVisualStyleBackColor = true;
+            this.btn_back_stf.Click += new System.EventHandler(this.btn_back_stf_Click);
             // 
             // Staff
             // 

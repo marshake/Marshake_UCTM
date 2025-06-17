@@ -63,14 +63,15 @@ namespace C__project_1.Views
         {
             string[,] credndials = new string[,]
             {
-                {"Admin","admin","Admin@123" },
+                {"Admin","admin","admin@123" },
                 {"Lecture","lecture","lecture@123" },
                 {"Staff","staff","staff@123" },
-                {"Student","student","Student@123" }
+                {"Student","student","student@123" }
+
             };
 
 
-
+            
             string role = cmb_role.Text.Trim();
             string username = TXT_USERNAME.Text.Trim();
             string password = TXT_PASSWORD.Text.Trim();
@@ -96,7 +97,7 @@ namespace C__project_1.Views
             {
                 MessageBox.Show($"Login succesfull as {role}!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                DashBoard dashboard = new DashBoard();
+                DashBoard dashboard = new DashBoard(role);
                 dashboard.Show();
                 this.Hide();
 
@@ -109,6 +110,10 @@ namespace C__project_1.Views
                 password.Normalize();
             }
 
+
+
+
+
             
         }
 
@@ -116,6 +121,8 @@ namespace C__project_1.Views
         {
 
         }
+
+
     }
 }
 

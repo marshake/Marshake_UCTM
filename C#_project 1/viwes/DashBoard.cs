@@ -1,4 +1,5 @@
 ﻿using C__project_1.Models;
+using C__project_1.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,30 @@ namespace C__project_1.viwes
 {
     public partial class DashBoard : Form
     {
-        public DashBoard()
+        private string userRole;
+        public DashBoard(string role)
         {
             InitializeComponent();
+            userRole = role;
+            SetButtonAccessBasedOnRole();
+
+        }
+        private void SetButtonAccessBasedOnRole() 
+        {
+            if (userRole == "Student")
+            {
+                btn_student.Enabled = true;
+                btn_staff.Enabled = false;
+                btn_lecture.Enabled = false;
+                btn_teacher.Enabled = false;
+            }
+            else // For Admin, Lecture, Staff
+            {
+                btn_student.Enabled = true;
+                btn_staff.Enabled = true;
+                btn_lecture.Enabled = true;
+                btn_teacher.Enabled = true;
+            }
         }
 
         public void LoadForm(object formObj)
@@ -64,6 +86,13 @@ namespace C__project_1.viwes
         private void btn_tt_Click(object sender, EventArgs e)
         {
             LoadForm(new Timetable());
+        }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
         }
     }
 }

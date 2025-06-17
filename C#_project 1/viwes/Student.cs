@@ -1,5 +1,6 @@
 ﻿using C__project_1.Controler;
 using C__project_1.Models;
+using C__project_1.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -88,12 +89,12 @@ namespace C__project_1.viwes
 
             MessageBox.Show("Student added successfully.");
 
-            // Clear form
+            
             txt_studentname.Text = "";
             txt_studentAddress.Text = "";
             txt_studentNIC.Text = "";
 
-            // Refresh grid
+            
             student_grw.DataSource = controller.GetAllStudents();
         }
 
@@ -167,7 +168,9 @@ namespace C__project_1.viwes
 
         private void back_student_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
         }
 
         private void cmb_coure_SelectedIndexChanged(object sender, EventArgs e)

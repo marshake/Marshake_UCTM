@@ -1,5 +1,6 @@
 ﻿using C__project_1.Controler;
 using C__project_1.Controllers;
+using C__project_1.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -142,6 +143,13 @@ namespace C__project_1.viwes
                     UpdateTeacherId = null;
                 }
             }
+        }
+
+        private void btn_back_tec_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using C__project_1.Controler;
 using C__project_1.Controllers;
+using C__project_1.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,7 +26,9 @@ namespace C__project_1.viwes
 
         private void button4_Click(object sender, EventArgs e)
         {
-            // You can implement functionality 
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
         }
 
         private void btn_add_letc_Click(object sender, EventArgs e)
