@@ -71,3 +71,4 @@ Z:\C# Big\c# project git\Marshake_UCTM\C#_project 1\obj\Debug\UnicomTICManagemen
 Z:\C# Big\c# project git\Marshake_UCTM\C#_project 1\obj\Debug\UnicomTI.449BFD41.Up2Date
 Z:\C# Big\c# project git\Marshake_UCTM\C#_project 1\obj\Debug\C#_project 1.exe
 Z:\C# Big\c# project git\Marshake_UCTM\C#_project 1\obj\Debug\C#_project 1.pdb
+Z:\C# Big\c# project git\Marshake_UCTM\C#_project 1\obj\Debug\C__project_1.viwes.Course___Subject.resources

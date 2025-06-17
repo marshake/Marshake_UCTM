@@ -145,6 +145,9 @@
     <EmbeddedResource Include="viwes\Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="viwes\Course &amp; Subject.resx">
+      <DependentUpon>Course &amp; Subject.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="viwes\DashBoard.resx">
       <DependentUpon>DashBoard.cs</DependentUpon>
     </EmbeddedResource>

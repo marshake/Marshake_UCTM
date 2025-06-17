@@ -78,7 +78,7 @@
             // txt_letc_name
             // 
             this.txt_letc_name.Location = new System.Drawing.Point(259, 44);
-            this.txt_letc_name.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_letc_name.Margin = new System.Windows.Forms.Padding(2);
             this.txt_letc_name.Name = "txt_letc_name";
             this.txt_letc_name.Size = new System.Drawing.Size(146, 20);
             this.txt_letc_name.TabIndex = 4;
@@ -86,7 +86,7 @@
             // txt_letc_addres
             // 
             this.txt_letc_addres.Location = new System.Drawing.Point(259, 80);
-            this.txt_letc_addres.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_letc_addres.Margin = new System.Windows.Forms.Padding(2);
             this.txt_letc_addres.Name = "txt_letc_addres";
             this.txt_letc_addres.Size = new System.Drawing.Size(146, 20);
             this.txt_letc_addres.TabIndex = 5;
@@ -94,7 +94,7 @@
             // txt_letc_nic
             // 
             this.txt_letc_nic.Location = new System.Drawing.Point(259, 121);
-            this.txt_letc_nic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_letc_nic.Margin = new System.Windows.Forms.Padding(2);
             this.txt_letc_nic.Name = "txt_letc_nic";
             this.txt_letc_nic.Size = new System.Drawing.Size(146, 20);
             this.txt_letc_nic.TabIndex = 6;
@@ -104,7 +104,7 @@
             // 
             this.dgv_lecturer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_lecturer.Location = new System.Drawing.Point(133, 182);
-            this.dgv_lecturer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_lecturer.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_lecturer.Name = "dgv_lecturer";
             this.dgv_lecturer.RowHeadersWidth = 51;
             this.dgv_lecturer.RowTemplate.Height = 24;
@@ -117,9 +117,9 @@
             this.btn_add_letc.BackColor = System.Drawing.Color.IndianRed;
             this.btn_add_letc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_add_letc.Location = new System.Drawing.Point(133, 317);
-            this.btn_add_letc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_add_letc.Margin = new System.Windows.Forms.Padding(2);
             this.btn_add_letc.Name = "btn_add_letc";
-            this.btn_add_letc.Size = new System.Drawing.Size(56, 31);
+            this.btn_add_letc.Size = new System.Drawing.Size(64, 31);
             this.btn_add_letc.TabIndex = 9;
             this.btn_add_letc.Text = "Add";
             this.btn_add_letc.UseVisualStyleBackColor = false;
@@ -129,10 +129,10 @@
             // 
             this.btn_update_lect.BackColor = System.Drawing.Color.IndianRed;
             this.btn_update_lect.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_update_lect.Location = new System.Drawing.Point(212, 317);
-            this.btn_update_lect.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_update_lect.Location = new System.Drawing.Point(201, 317);
+            this.btn_update_lect.Margin = new System.Windows.Forms.Padding(2);
             this.btn_update_lect.Name = "btn_update_lect";
-            this.btn_update_lect.Size = new System.Drawing.Size(63, 31);
+            this.btn_update_lect.Size = new System.Drawing.Size(80, 31);
             this.btn_update_lect.TabIndex = 10;
             this.btn_update_lect.Text = "Update";
             this.btn_update_lect.UseVisualStyleBackColor = false;
@@ -142,10 +142,10 @@
             // 
             this.btn_delete_lect.BackColor = System.Drawing.Color.IndianRed;
             this.btn_delete_lect.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete_lect.Location = new System.Drawing.Point(296, 317);
-            this.btn_delete_lect.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_delete_lect.Location = new System.Drawing.Point(285, 317);
+            this.btn_delete_lect.Margin = new System.Windows.Forms.Padding(2);
             this.btn_delete_lect.Name = "btn_delete_lect";
-            this.btn_delete_lect.Size = new System.Drawing.Size(56, 31);
+            this.btn_delete_lect.Size = new System.Drawing.Size(70, 31);
             this.btn_delete_lect.TabIndex = 11;
             this.btn_delete_lect.Text = "Delete";
             this.btn_delete_lect.UseVisualStyleBackColor = false;
@@ -155,10 +155,10 @@
             // 
             this.btn_backletc.BackColor = System.Drawing.Color.IndianRed;
             this.btn_backletc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_backletc.Location = new System.Drawing.Point(370, 317);
-            this.btn_backletc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_backletc.Location = new System.Drawing.Point(359, 317);
+            this.btn_backletc.Margin = new System.Windows.Forms.Padding(2);
             this.btn_backletc.Name = "btn_backletc";
-            this.btn_backletc.Size = new System.Drawing.Size(56, 31);
+            this.btn_backletc.Size = new System.Drawing.Size(71, 31);
             this.btn_backletc.TabIndex = 12;
             this.btn_backletc.Text = "Back";
             this.btn_backletc.UseVisualStyleBackColor = false;
@@ -181,7 +181,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Lecturer";
             this.Text = "Lecturer";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_lecturer)).EndInit();

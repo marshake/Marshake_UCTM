@@ -66,7 +66,7 @@ namespace C__project_1.Views
                 {"Admin","admin","admin@123" },
                 {"Lecture","lecture","lecture@123" },
                 {"Staff","staff","staff@123" },
-                {"Student","student","student@123" }
+                {"Student","student","tudent@123" }
 
             };
 
