@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace C__project_1.viwes
 {
     public partial class DashBoard : Form
@@ -25,6 +26,7 @@ namespace C__project_1.viwes
             InitializeComponent();
             currentUser = user; // ✅ Fix: use the parameter, not the property
             SetButtonAccessBasedOnRole();
+            HideRole.role = user.Role;
         }
 
         private void SetButtonAccessBasedOnRole()
@@ -57,6 +59,7 @@ namespace C__project_1.viwes
                     btn_marks.Enabled = true;
                     btn_tt.Enabled = true;
                     btn_student.Enabled = true;
+                    btn_staff.Enabled = true;
                     break;
 
                 case "Lecture":
@@ -64,6 +67,7 @@ namespace C__project_1.viwes
                     btn_tt.Enabled = true;
                     btn_student.Enabled = true;
                     btn_Exam.Enabled = true;
+                    btn_lecture.Enabled = true;
                     break;
 
                 case "Student":
@@ -135,7 +139,7 @@ namespace C__project_1.viwes
 
         private void btn_tt_Click(object sender, EventArgs e)
         {
-            LoadForm(new Timetable());
+            LoadForm(new TimetableForm());
         }
 
         private void btn_exit_Click(object sender, EventArgs e)

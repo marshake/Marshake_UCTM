@@ -1,5 +1,6 @@
 ﻿using C__project_1.Controler;
 using C__project_1.Controllers;
+using C__project_1.Models;
 using C__project_1.Views;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,15 @@ namespace C__project_1.viwes
             InitializeComponent();
             LecturerController controller = new LecturerController();
             dgv_lecturer.DataSource = controller.GetAllLecturers();
+
+            if (HideRole.role == "Lecture" || HideRole.role == "Student")
+            {
+                btn_add.Visible = false;
+                btn_update.Visible = false;
+                btn_delete.Visible = false;
+            }
+            
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -138,6 +148,11 @@ namespace C__project_1.viwes
                     UpdateLecturerId = null;
                 }
             }
+        }
+
+        private void Lecturer_Load(object sender, EventArgs e)
+        {
+
         }
     }
 

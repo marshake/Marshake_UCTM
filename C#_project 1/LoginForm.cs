@@ -92,7 +92,15 @@ namespace C__project_1.Views
 
         }
 
+        private void TXT_PASSWORD_TextChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

@@ -35,9 +35,9 @@
             this.txt_letc_addres = new System.Windows.Forms.TextBox();
             this.txt_letc_nic = new System.Windows.Forms.TextBox();
             this.dgv_lecturer = new System.Windows.Forms.DataGridView();
-            this.btn_add_letc = new System.Windows.Forms.Button();
-            this.btn_update_lect = new System.Windows.Forms.Button();
-            this.btn_delete_lect = new System.Windows.Forms.Button();
+            this.btn_add = new System.Windows.Forms.Button();
+            this.btn_update = new System.Windows.Forms.Button();
+            this.btn_delete = new System.Windows.Forms.Button();
             this.btn_backletc = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_lecturer)).BeginInit();
             this.SuspendLayout();
@@ -112,44 +112,44 @@
             this.dgv_lecturer.TabIndex = 8;
             this.dgv_lecturer.SelectionChanged += new System.EventHandler(this.dgv_lecturer_SelectionChanged);
             // 
-            // btn_add_letc
+            // btn_add
             // 
-            this.btn_add_letc.BackColor = System.Drawing.Color.IndianRed;
-            this.btn_add_letc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add_letc.Location = new System.Drawing.Point(133, 317);
-            this.btn_add_letc.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_add_letc.Name = "btn_add_letc";
-            this.btn_add_letc.Size = new System.Drawing.Size(64, 31);
-            this.btn_add_letc.TabIndex = 9;
-            this.btn_add_letc.Text = "Add";
-            this.btn_add_letc.UseVisualStyleBackColor = false;
-            this.btn_add_letc.Click += new System.EventHandler(this.btn_add_letc_Click);
+            this.btn_add.BackColor = System.Drawing.Color.IndianRed;
+            this.btn_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add.Location = new System.Drawing.Point(133, 317);
+            this.btn_add.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(64, 31);
+            this.btn_add.TabIndex = 9;
+            this.btn_add.Text = "Add";
+            this.btn_add.UseVisualStyleBackColor = false;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_letc_Click);
             // 
-            // btn_update_lect
+            // btn_update
             // 
-            this.btn_update_lect.BackColor = System.Drawing.Color.IndianRed;
-            this.btn_update_lect.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_update_lect.Location = new System.Drawing.Point(201, 317);
-            this.btn_update_lect.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_update_lect.Name = "btn_update_lect";
-            this.btn_update_lect.Size = new System.Drawing.Size(80, 31);
-            this.btn_update_lect.TabIndex = 10;
-            this.btn_update_lect.Text = "Update";
-            this.btn_update_lect.UseVisualStyleBackColor = false;
-            this.btn_update_lect.Click += new System.EventHandler(this.btn_update_lect_Click);
+            this.btn_update.BackColor = System.Drawing.Color.IndianRed;
+            this.btn_update.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_update.Location = new System.Drawing.Point(201, 317);
+            this.btn_update.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(80, 31);
+            this.btn_update.TabIndex = 10;
+            this.btn_update.Text = "Update";
+            this.btn_update.UseVisualStyleBackColor = false;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_lect_Click);
             // 
-            // btn_delete_lect
+            // btn_delete
             // 
-            this.btn_delete_lect.BackColor = System.Drawing.Color.IndianRed;
-            this.btn_delete_lect.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete_lect.Location = new System.Drawing.Point(285, 317);
-            this.btn_delete_lect.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_delete_lect.Name = "btn_delete_lect";
-            this.btn_delete_lect.Size = new System.Drawing.Size(70, 31);
-            this.btn_delete_lect.TabIndex = 11;
-            this.btn_delete_lect.Text = "Delete";
-            this.btn_delete_lect.UseVisualStyleBackColor = false;
-            this.btn_delete_lect.Click += new System.EventHandler(this.btn_delete_lect_Click);
+            this.btn_delete.BackColor = System.Drawing.Color.IndianRed;
+            this.btn_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delete.Location = new System.Drawing.Point(285, 317);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(70, 31);
+            this.btn_delete.TabIndex = 11;
+            this.btn_delete.Text = "Delete";
+            this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_lect_Click);
             // 
             // btn_backletc
             // 
@@ -171,9 +171,9 @@
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(584, 411);
             this.Controls.Add(this.btn_backletc);
-            this.Controls.Add(this.btn_delete_lect);
-            this.Controls.Add(this.btn_update_lect);
-            this.Controls.Add(this.btn_add_letc);
+            this.Controls.Add(this.btn_delete);
+            this.Controls.Add(this.btn_update);
+            this.Controls.Add(this.btn_add);
             this.Controls.Add(this.dgv_lecturer);
             this.Controls.Add(this.txt_letc_nic);
             this.Controls.Add(this.txt_letc_addres);
@@ -184,6 +184,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Lecturer";
             this.Text = "Lecturer";
+            this.Load += new System.EventHandler(this.Lecturer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_lecturer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -199,9 +200,9 @@
         private System.Windows.Forms.TextBox txt_letc_addres;
         private System.Windows.Forms.TextBox txt_letc_nic;
         private System.Windows.Forms.DataGridView dgv_lecturer;
-        private System.Windows.Forms.Button btn_add_letc;
-        private System.Windows.Forms.Button btn_update_lect;
-        private System.Windows.Forms.Button btn_delete_lect;
+        private System.Windows.Forms.Button btn_add;
+        private System.Windows.Forms.Button btn_update;
+        private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_backletc;
     }
 }

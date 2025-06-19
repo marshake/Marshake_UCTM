@@ -1,5 +1,6 @@
 ﻿using C__project_1.Controler;
 using C__project_1.Controllers;
+using C__project_1.Models;
 using C__project_1.Views;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,19 @@ namespace C__project_1.viwes
             InitializeComponent();
            StaffController controller = new StaffController();
             dgv_staff.DataSource = controller.GetAllStaff();
+
+            
+            if (HideRole.role == "Staff" || HideRole.role == "Student")
+            {
+                btn_add.Visible = false;
+                btn_Update.Visible = false;
+                btn_delete.Visible = false;
+            }
+        }
+
+        public void HideButtons()
+        {
+            btn_add.Visible = false;
         }
 
         private void label3_Click(object sender, EventArgs e)

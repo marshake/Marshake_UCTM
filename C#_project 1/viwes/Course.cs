@@ -1,4 +1,5 @@
-﻿using System;
+﻿using C__project_1.Controler;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,5 +17,15 @@ namespace C__project_1.viwes
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+
+
+
+
+

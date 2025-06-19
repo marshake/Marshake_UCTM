@@ -35,9 +35,9 @@
             this.txt_staffAddress = new System.Windows.Forms.TextBox();
             this.txt_staffNIC = new System.Windows.Forms.TextBox();
             this.dgv_staff = new System.Windows.Forms.DataGridView();
-            this.btn_add_stf = new System.Windows.Forms.Button();
-            this.btn_Update_stf = new System.Windows.Forms.Button();
-            this.btn_delete_stf = new System.Windows.Forms.Button();
+            this.btn_add = new System.Windows.Forms.Button();
+            this.btn_Update = new System.Windows.Forms.Button();
+            this.btn_delete = new System.Windows.Forms.Button();
             this.btn_back_stf = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_staff)).BeginInit();
             this.SuspendLayout();
@@ -107,40 +107,40 @@
             this.dgv_staff.TabIndex = 8;
             this.dgv_staff.SelectionChanged += new System.EventHandler(this.dgv_staff_SelectionChanged);
             // 
-            // btn_add_stf
+            // btn_add
             // 
-            this.btn_add_stf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btn_add_stf.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add_stf.Location = new System.Drawing.Point(88, 359);
-            this.btn_add_stf.Name = "btn_add_stf";
-            this.btn_add_stf.Size = new System.Drawing.Size(75, 23);
-            this.btn_add_stf.TabIndex = 9;
-            this.btn_add_stf.Text = "Add";
-            this.btn_add_stf.UseVisualStyleBackColor = false;
-            this.btn_add_stf.Click += new System.EventHandler(this.btn_add_stf_Click);
+            this.btn_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add.Location = new System.Drawing.Point(88, 359);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(75, 23);
+            this.btn_add.TabIndex = 9;
+            this.btn_add.Text = "Add";
+            this.btn_add.UseVisualStyleBackColor = false;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_stf_Click);
             // 
-            // btn_Update_stf
+            // btn_Update
             // 
-            this.btn_Update_stf.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Update_stf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Update_stf.Location = new System.Drawing.Point(183, 359);
-            this.btn_Update_stf.Name = "btn_Update_stf";
-            this.btn_Update_stf.Size = new System.Drawing.Size(75, 23);
-            this.btn_Update_stf.TabIndex = 10;
-            this.btn_Update_stf.Text = "Update";
-            this.btn_Update_stf.UseVisualStyleBackColor = false;
-            this.btn_Update_stf.Click += new System.EventHandler(this.button2_Click);
+            this.btn_Update.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Update.Location = new System.Drawing.Point(183, 359);
+            this.btn_Update.Name = "btn_Update";
+            this.btn_Update.Size = new System.Drawing.Size(75, 23);
+            this.btn_Update.TabIndex = 10;
+            this.btn_Update.Text = "Update";
+            this.btn_Update.UseVisualStyleBackColor = false;
+            this.btn_Update.Click += new System.EventHandler(this.button2_Click);
             // 
-            // btn_delete_stf
+            // btn_delete
             // 
-            this.btn_delete_stf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete_stf.Location = new System.Drawing.Point(274, 359);
-            this.btn_delete_stf.Name = "btn_delete_stf";
-            this.btn_delete_stf.Size = new System.Drawing.Size(75, 23);
-            this.btn_delete_stf.TabIndex = 11;
-            this.btn_delete_stf.Text = "Delete";
-            this.btn_delete_stf.UseVisualStyleBackColor = true;
-            this.btn_delete_stf.Click += new System.EventHandler(this.button3_Click);
+            this.btn_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delete.Location = new System.Drawing.Point(274, 359);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(75, 23);
+            this.btn_delete.TabIndex = 11;
+            this.btn_delete.Text = "Delete";
+            this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.button3_Click);
             // 
             // btn_back_stf
             // 
@@ -160,9 +160,9 @@
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(521, 450);
             this.Controls.Add(this.btn_back_stf);
-            this.Controls.Add(this.btn_delete_stf);
-            this.Controls.Add(this.btn_Update_stf);
-            this.Controls.Add(this.btn_add_stf);
+            this.Controls.Add(this.btn_delete);
+            this.Controls.Add(this.btn_Update);
+            this.Controls.Add(this.btn_add);
             this.Controls.Add(this.dgv_staff);
             this.Controls.Add(this.txt_staffNIC);
             this.Controls.Add(this.txt_staffAddress);
@@ -189,9 +189,9 @@
         private System.Windows.Forms.TextBox txt_staffAddress;
         private System.Windows.Forms.TextBox txt_staffNIC;
         private System.Windows.Forms.DataGridView dgv_staff;
-        private System.Windows.Forms.Button btn_add_stf;
-        private System.Windows.Forms.Button btn_Update_stf;
-        private System.Windows.Forms.Button btn_delete_stf;
+        private System.Windows.Forms.Button btn_add;
+        private System.Windows.Forms.Button btn_Update;
+        private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_back_stf;
     }
 }

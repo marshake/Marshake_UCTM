@@ -33,6 +33,12 @@ namespace C__project_1.viwes
             cmb_coure.Items.Add("IT");
             cmb_coure.Items.Add("English");
             cmb_coure.SelectedIndex = 0;
+            if (HideRole.role == "Lecture" || HideRole.role == "Staff" || HideRole.role == "Student")
+            {
+                btn_add.Visible = false;
+                btn_delete.Visible = false;
+                btn_update.Visible = false;
+            }
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)

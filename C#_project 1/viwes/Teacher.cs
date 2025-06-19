@@ -151,6 +151,11 @@ namespace C__project_1.viwes
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
         }
+
+        private void Teacher_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
     

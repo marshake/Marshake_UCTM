@@ -35,9 +35,9 @@
             this.txt_tec_Address = new System.Windows.Forms.TextBox();
             this.txt_tec_NIC = new System.Windows.Forms.TextBox();
             this.dgv_Teacher = new System.Windows.Forms.DataGridView();
-            this.btn_Add_tec = new System.Windows.Forms.Button();
-            this.btn_delete_tec = new System.Windows.Forms.Button();
-            this.btn_Update_tec = new System.Windows.Forms.Button();
+            this.btn_Add = new System.Windows.Forms.Button();
+            this.btn_delete = new System.Windows.Forms.Button();
+            this.btn_Update = new System.Windows.Forms.Button();
             this.btn_back_tec = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Teacher)).BeginInit();
             this.SuspendLayout();
@@ -102,41 +102,41 @@
             this.dgv_Teacher.TabIndex = 8;
             this.dgv_Teacher.SelectionChanged += new System.EventHandler(this.dgv_Teacher_SelectionChanged);
             // 
-            // btn_Add_tec
+            // btn_Add
             // 
-            this.btn_Add_tec.BackColor = System.Drawing.Color.Teal;
-            this.btn_Add_tec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Add_tec.Location = new System.Drawing.Point(163, 364);
-            this.btn_Add_tec.Name = "btn_Add_tec";
-            this.btn_Add_tec.Size = new System.Drawing.Size(75, 23);
-            this.btn_Add_tec.TabIndex = 9;
-            this.btn_Add_tec.Text = "Add";
-            this.btn_Add_tec.UseVisualStyleBackColor = false;
-            this.btn_Add_tec.Click += new System.EventHandler(this.btn_Add_tec_Click);
+            this.btn_Add.BackColor = System.Drawing.Color.Teal;
+            this.btn_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Add.Location = new System.Drawing.Point(163, 364);
+            this.btn_Add.Name = "btn_Add";
+            this.btn_Add.Size = new System.Drawing.Size(75, 23);
+            this.btn_Add.TabIndex = 9;
+            this.btn_Add.Text = "Add";
+            this.btn_Add.UseVisualStyleBackColor = false;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_tec_Click);
             // 
-            // btn_delete_tec
+            // btn_delete
             // 
-            this.btn_delete_tec.BackColor = System.Drawing.Color.Teal;
-            this.btn_delete_tec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete_tec.Location = new System.Drawing.Point(356, 364);
-            this.btn_delete_tec.Name = "btn_delete_tec";
-            this.btn_delete_tec.Size = new System.Drawing.Size(75, 23);
-            this.btn_delete_tec.TabIndex = 10;
-            this.btn_delete_tec.Text = "Delete";
-            this.btn_delete_tec.UseVisualStyleBackColor = false;
-            this.btn_delete_tec.Click += new System.EventHandler(this.btn_delete_tec_Click);
+            this.btn_delete.BackColor = System.Drawing.Color.Teal;
+            this.btn_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delete.Location = new System.Drawing.Point(356, 364);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(75, 23);
+            this.btn_delete.TabIndex = 10;
+            this.btn_delete.Text = "Delete";
+            this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_tec_Click);
             // 
-            // btn_Update_tec
+            // btn_Update
             // 
-            this.btn_Update_tec.BackColor = System.Drawing.Color.Teal;
-            this.btn_Update_tec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Update_tec.Location = new System.Drawing.Point(263, 364);
-            this.btn_Update_tec.Name = "btn_Update_tec";
-            this.btn_Update_tec.Size = new System.Drawing.Size(75, 23);
-            this.btn_Update_tec.TabIndex = 11;
-            this.btn_Update_tec.Text = "Update";
-            this.btn_Update_tec.UseVisualStyleBackColor = false;
-            this.btn_Update_tec.Click += new System.EventHandler(this.btn_Update_tec_Click);
+            this.btn_Update.BackColor = System.Drawing.Color.Teal;
+            this.btn_Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Update.Location = new System.Drawing.Point(263, 364);
+            this.btn_Update.Name = "btn_Update";
+            this.btn_Update.Size = new System.Drawing.Size(75, 23);
+            this.btn_Update.TabIndex = 11;
+            this.btn_Update.Text = "Update";
+            this.btn_Update.UseVisualStyleBackColor = false;
+            this.btn_Update.Click += new System.EventHandler(this.btn_Update_tec_Click);
             // 
             // btn_back_tec
             // 
@@ -157,9 +157,9 @@
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(691, 450);
             this.Controls.Add(this.btn_back_tec);
-            this.Controls.Add(this.btn_Update_tec);
-            this.Controls.Add(this.btn_delete_tec);
-            this.Controls.Add(this.btn_Add_tec);
+            this.Controls.Add(this.btn_Update);
+            this.Controls.Add(this.btn_delete);
+            this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.dgv_Teacher);
             this.Controls.Add(this.txt_tec_NIC);
             this.Controls.Add(this.txt_tec_Address);
@@ -169,6 +169,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Teacher";
             this.Text = "Teacher";
+            this.Load += new System.EventHandler(this.Teacher_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Teacher)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -184,9 +185,9 @@
         private System.Windows.Forms.TextBox txt_tec_Address;
         private System.Windows.Forms.TextBox txt_tec_NIC;
         private System.Windows.Forms.DataGridView dgv_Teacher;
-        private System.Windows.Forms.Button btn_Add_tec;
-        private System.Windows.Forms.Button btn_delete_tec;
-        private System.Windows.Forms.Button btn_Update_tec;
+        private System.Windows.Forms.Button btn_Add;
+        private System.Windows.Forms.Button btn_delete;
+        private System.Windows.Forms.Button btn_Update;
         private System.Windows.Forms.Button btn_back_tec;
     }
 }

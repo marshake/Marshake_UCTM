@@ -103,6 +103,7 @@ Z:\C# Big\18.06.2025 changed\Marshake_UCTM\C#_project 1\obj\Debug\C__project_1.V
 Z:\C# Big\18.06.2025 changed\Marshake_UCTM\C#_project 1\obj\Debug\C__project_1.viwes.Admin.resources
 Z:\C# Big\18.06.2025 changed\Marshake_UCTM\C#_project 1\obj\Debug\C__project_1.viwes.Course___Subject.resources
 Z:\C# Big\18.06.2025 changed\Marshake_UCTM\C#_project 1\obj\Debug\C__project_1.viwes.DashBoard.resources
+Z:\C# Big\18.06.2025 changed\Marshake_UCTM\C#_project 1\obj\Debug\C__project_1.viwes.Exam.resources
 Z:\C# Big\18.06.2025 changed\Marshake_UCTM\C#_project 1\obj\Debug\C__project_1.viwes.Lecturer.resources
 Z:\C# Big\18.06.2025 changed\Marshake_UCTM\C#_project 1\obj\Debug\C__project_1.viwes.Staff.resources
 Z:\C# Big\18.06.2025 changed\Marshake_UCTM\C#_project 1\obj\Debug\C__project_1.viwes.Student.resources
@@ -112,5 +113,4 @@ Z:\C# Big\18.06.2025 changed\Marshake_UCTM\C#_project 1\obj\Debug\UnicomTICManag
 Z:\C# Big\18.06.2025 changed\Marshake_UCTM\C#_project 1\obj\Debug\UnicomTI.449BFD41.Up2Date
 Z:\C# Big\18.06.2025 changed\Marshake_UCTM\C#_project 1\obj\Debug\C#_project 1.exe
 Z:\C# Big\18.06.2025 changed\Marshake_UCTM\C#_project 1\obj\Debug\C#_project 1.pdb
-Z:\C# Big\18.06.2025 changed\Marshake_UCTM\C#_project 1\obj\Debug\C__project_1.viwes.Exam.resources
-Z:\C# Big\18.06.2025 changed\Marshake_UCTM\C#_project 1\obj\Debug\C__project_1.viwes.Timetable.resources
+Z:\C# Big\18.06.2025 changed\Marshake_UCTM\C#_project 1\obj\Debug\C__project_1.viwes.TimetableForm.resources
