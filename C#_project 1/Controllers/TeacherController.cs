@@ -10,11 +10,14 @@ namespace C__project_1.Controllers
 {
     internal class TeacherController
     {
-            public void AddTeacher(Models.Teacher teacher)
+        public void AddTeacher(Teacher teacher)
+        {
+            using (var conn = Database.GetConnection())
             {
-                using (var conn = Database.GetConnection())
+                conn.Open();  // OPEN CONNECTION
+
+                using (var cmd = conn.CreateCommand())
                 {
-                    var cmd = conn.CreateCommand();
                     cmd.CommandText = "INSERT INTO Teachers (Name, Address, NIC) VALUES (@name, @address, @NIC)";
                     cmd.Parameters.AddWithValue("@name", teacher.Name);
                     cmd.Parameters.AddWithValue("@address", teacher.Address);
@@ -22,13 +25,17 @@ namespace C__project_1.Controllers
                     cmd.ExecuteNonQuery();
                 }
             }
+        }
 
-            public List<Teacher> GetAllTeachers()
+        public List<Teacher> GetAllTeachers()
+        {
+            List<Teacher> teachers = new List<Teacher>();
+            using (var conn = Database.GetConnection())
             {
-                List<Teacher> teachers = new List<Teacher>();
-                using (var conn = Database.GetConnection())
+                conn.Open();  // OPEN CONNECTION
+
+                using (var cmd = conn.CreateCommand())
                 {
-                    var cmd = conn.CreateCommand();
                     cmd.CommandText = "SELECT * FROM Teachers";
 
                     using (var reader = cmd.ExecuteReader())
@@ -45,14 +52,18 @@ namespace C__project_1.Controllers
                         }
                     }
                 }
-                return teachers;
             }
+            return teachers;
+        }
 
-            public void UpdateTeacher(Teacher teacher)
+        public void UpdateTeacher(Teacher teacher)
+        {
+            using (var conn = Database.GetConnection())
             {
-                using (var conn = Database.GetConnection())
+                conn.Open();  // OPEN CONNECTION
+
+                using (var cmd = conn.CreateCommand())
                 {
-                    var cmd = conn.CreateCommand();
                     cmd.CommandText = "UPDATE Teachers SET Name = @name, Address = @address, NIC = @NIC WHERE Id = @id";
                     cmd.Parameters.AddWithValue("@name", teacher.Name);
                     cmd.Parameters.AddWithValue("@address", teacher.Address);
@@ -61,12 +72,16 @@ namespace C__project_1.Controllers
                     cmd.ExecuteNonQuery();
                 }
             }
+        }
 
-            public void DeleteTeacher(int id)
+        public void DeleteTeacher(int id)
+        {
+            using (var conn = Database.GetConnection())
             {
-                using (var conn = Database.GetConnection())
+                conn.Open();  // OPEN CONNECTION
+
+                using (var cmd = conn.CreateCommand())
                 {
-                    var cmd = conn.CreateCommand();
                     cmd.CommandText = "DELETE FROM Teachers WHERE Id = @id";
                     cmd.Parameters.AddWithValue("@id", id);
                     cmd.ExecuteNonQuery();
@@ -74,3 +89,4 @@ namespace C__project_1.Controllers
             }
         }
     }
+}

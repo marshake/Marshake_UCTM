@@ -13,12 +13,16 @@ namespace C__project_1.Controllers
         {
             using (var conn = Database.GetConnection())
             {
-                var cmd = conn.CreateCommand();
-                cmd.CommandText = "INSERT INTO Staff (Name, Address, NIC) VALUES (@name, @address, @NIC)";
-                cmd.Parameters.AddWithValue("@name", staff.Name);
-                cmd.Parameters.AddWithValue("@address", staff.Address);
-                cmd.Parameters.AddWithValue("@NIC", staff.NIC);
-                cmd.ExecuteNonQuery();
+                conn.Open();  // Open connection
+
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = "INSERT INTO Staff (Name, Address, NIC) VALUES (@name, @address, @NIC)";
+                    cmd.Parameters.AddWithValue("@name", staff.Name);
+                    cmd.Parameters.AddWithValue("@address", staff.Address);
+                    cmd.Parameters.AddWithValue("@NIC", staff.NIC);
+                    cmd.ExecuteNonQuery();
+                }
             }
         }
 
@@ -27,20 +31,24 @@ namespace C__project_1.Controllers
             List<Models.Staff> staffList = new List<Models.Staff>();
             using (var conn = Database.GetConnection())
             {
-                var cmd = conn.CreateCommand();
-                cmd.CommandText = "SELECT * FROM Staff";
+                conn.Open();  // Open connection
 
-                using (var reader = cmd.ExecuteReader())
+                using (var cmd = conn.CreateCommand())
                 {
-                    while (reader.Read())
+                    cmd.CommandText = "SELECT * FROM Staff";
+
+                    using (var reader = cmd.ExecuteReader())
                     {
-                        staffList.Add(new Models.Staff
+                        while (reader.Read())
                         {
-                            Id = reader.GetInt32(0),
-                            Name = reader.GetString(1),
-                            Address = reader.GetString(2),
-                            NIC = reader.GetString(3)
-                        });
+                            staffList.Add(new Models.Staff
+                            {
+                                Id = reader.GetInt32(0),
+                                Name = reader.GetString(1),
+                                Address = reader.GetString(2),
+                                NIC = reader.GetString(3)
+                            });
+                        }
                     }
                 }
             }
@@ -51,13 +59,17 @@ namespace C__project_1.Controllers
         {
             using (var conn = Database.GetConnection())
             {
-                var cmd = conn.CreateCommand();
-                cmd.CommandText = "UPDATE Staff SET Name = @name, Address = @address, NIC = @NIC WHERE Id = @id";
-                cmd.Parameters.AddWithValue("@name", staff.Name);
-                cmd.Parameters.AddWithValue("@address", staff.Address);
-                cmd.Parameters.AddWithValue("@NIC", staff.NIC);
-                cmd.Parameters.AddWithValue("@id", staff.Id);
-                cmd.ExecuteNonQuery();
+                conn.Open();  // Open connection
+
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = "UPDATE Staff SET Name = @name, Address = @address, NIC = @NIC WHERE Id = @id";
+                    cmd.Parameters.AddWithValue("@name", staff.Name);
+                    cmd.Parameters.AddWithValue("@address", staff.Address);
+                    cmd.Parameters.AddWithValue("@NIC", staff.NIC);
+                    cmd.Parameters.AddWithValue("@id", staff.Id);
+                    cmd.ExecuteNonQuery();
+                }
             }
         }
 
@@ -65,10 +77,14 @@ namespace C__project_1.Controllers
         {
             using (var conn = Database.GetConnection())
             {
-                var cmd = conn.CreateCommand();
-                cmd.CommandText = "DELETE FROM Staff WHERE Id = @id";
-                cmd.Parameters.AddWithValue("@id", id);
-                cmd.ExecuteNonQuery();
+                conn.Open();  // Open connection
+
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = "DELETE FROM Staff WHERE Id = @id";
+                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.ExecuteNonQuery();
+                }
             }
         }
     }

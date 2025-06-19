@@ -170,7 +170,7 @@
             this.back_student.BackColor = System.Drawing.Color.Teal;
             this.back_student.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.back_student.Location = new System.Drawing.Point(405, 364);
-            this.back_student.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.back_student.Margin = new System.Windows.Forms.Padding(2);
             this.back_student.Name = "back_student";
             this.back_student.Size = new System.Drawing.Size(68, 23);
             this.back_student.TabIndex = 16;
@@ -182,7 +182,7 @@
             // 
             this.cmb_coure.FormattingEnabled = true;
             this.cmb_coure.Location = new System.Drawing.Point(236, 173);
-            this.cmb_coure.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_coure.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_coure.Name = "cmb_coure";
             this.cmb_coure.Size = new System.Drawing.Size(221, 21);
             this.cmb_coure.TabIndex = 17;
@@ -193,7 +193,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(572, 436);
+            this.ClientSize = new System.Drawing.Size(584, 411);
             this.Controls.Add(this.cmb_coure);
             this.Controls.Add(this.back_student);
             this.Controls.Add(this.txt_course);

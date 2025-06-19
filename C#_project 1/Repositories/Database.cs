@@ -9,12 +9,11 @@ namespace C__project_1.Repositories
 {
     public static class Database
     {
-        public static string ConnectionString = "Data Source=UMCdatabaseDb.db;Version=3;";
+        public static string ConnectionString = "Data Source=unicomticDB.db;Version=3;";
 
         public static SQLiteConnection GetConnection()
         {
             var conn = new SQLiteConnection(ConnectionString);
-            conn.Open();
             return conn;
         }
     }

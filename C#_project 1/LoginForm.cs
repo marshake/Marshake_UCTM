@@ -15,6 +15,7 @@ namespace C__project_1.Views
 {
     public partial class LoginForm : Form
     {
+        private LoginController loginController = new LoginController();
         public LoginForm()
         {
             InitializeComponent();
@@ -61,60 +62,29 @@ namespace C__project_1.Views
 
         private void BTN_LOGIN_Click(object sender, EventArgs e)
         {
-            string[,] credndials = new string[,]
-            {
-                {"Admin","admin","admin@123" },
-                {"Lecture","lecture","lecture@123" },
-                {"Staff","staff","staff@123" },
-                {"Student","student","tudent@123" }
-
-            };
-
-
-            
-            string role = cmb_role.Text.Trim();
             string username = TXT_USERNAME.Text.Trim();
             string password = TXT_PASSWORD.Text.Trim();
-           
+            string role = cmb_role.Text.Trim();
 
-            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password) || string.IsNullOrWhiteSpace(role))
             {
-                MessageBox.Show("Please enter all fields.", "validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please enter all fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            bool isValid = false;
-            for (int i = 0; i < credndials.GetLength(0); i++)
-            {
-                if (credndials[i, 0] == role &&
-                    credndials[i, 1] == username &&
-                    credndials[i, 2] == password)
-                {
-                    isValid = true;
-                    break;
-                }
-            }
-            if (isValid)
-            {
-                MessageBox.Show($"Login succesfull as {role}!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                DashBoard dashboard = new DashBoard(role);
+            User user = loginController.Authenticate(username, password, role);
+
+            if (user != null)
+            {
+                MessageBox.Show($"Login successful as {user.Role}!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DashBoard dashboard = new DashBoard(user);
                 dashboard.Show();
                 this.Hide();
-
             }
             else
             {
-                MessageBox.Show("Invalid credetials.please try agin", "Login failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                role.Clone();
-                username.Normalize();
-                password.Normalize();
+                MessageBox.Show("Invalid credentials. Please try again.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
-
-
-
-            
         }
 
         private void cmb_role_SelectedIndexChanged(object sender, EventArgs e)

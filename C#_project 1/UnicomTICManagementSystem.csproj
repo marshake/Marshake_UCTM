@@ -88,17 +88,23 @@
     <Compile Include="viwes\Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="viwes\Course &amp; Subject.cs">
+    <Compile Include="viwes\Course.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="viwes\Course &amp; Subject.Designer.cs">
-      <DependentUpon>Course &amp; Subject.cs</DependentUpon>
+    <Compile Include="viwes\Course.Designer.cs">
+      <DependentUpon>Course.cs</DependentUpon>
     </Compile>
     <Compile Include="viwes\DashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="viwes\DashBoard.Designer.cs">
       <DependentUpon>DashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viwes\Exam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viwes\Exam.Designer.cs">
+      <DependentUpon>Exam.cs</DependentUpon>
     </Compile>
     <Compile Include="viwes\Lecturer.cs">
       <SubType>Form</SubType>
@@ -145,11 +151,14 @@
     <EmbeddedResource Include="viwes\Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="viwes\Course &amp; Subject.resx">
-      <DependentUpon>Course &amp; Subject.cs</DependentUpon>
+    <EmbeddedResource Include="viwes\Course.resx">
+      <DependentUpon>Course.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="viwes\DashBoard.resx">
       <DependentUpon>DashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viwes\Exam.resx">
+      <DependentUpon>Exam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="viwes\Lecturer.resx">
       <DependentUpon>Lecturer.cs</DependentUpon>
@@ -162,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="viwes\Teacher.resx">
       <DependentUpon>Teacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viwes\Timetable.resx">
+      <DependentUpon>Timetable.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

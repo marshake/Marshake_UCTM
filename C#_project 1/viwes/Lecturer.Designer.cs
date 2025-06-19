@@ -169,7 +169,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(565, 366);
+            this.ClientSize = new System.Drawing.Size(584, 411);
             this.Controls.Add(this.btn_backletc);
             this.Controls.Add(this.btn_delete_lect);
             this.Controls.Add(this.btn_update_lect);

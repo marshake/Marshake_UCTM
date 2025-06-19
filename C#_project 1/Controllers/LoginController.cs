@@ -7,43 +7,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
+using System.Data;
 
 namespace C__project_1.Controler
 {
-   public class LoginController
-   {
-        public User Authenticate(string username, string password)
+    public class LoginController
+    {
+        public User Authenticate(string username, string password, string role)
         {
-            
-
             using (var connection = Database.GetConnection())
             {
-                
+                connection.Open();
 
-                
-                string query = "SELECT Username, Password, Role FROM Users WHERE Username=@username AND Password=@password";
+                string query = "SELECT Username, Password, Role FROM Users WHERE Username = @username AND Password = @password AND Role = @role";
 
-                using (var command = new System.Data.SQLite.SQLiteCommand(query, connection))
+                using (var command = new SQLiteCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@username", username);
                     command.Parameters.AddWithValue("@password", password);
+                    command.Parameters.AddWithValue("@role", role);
 
-                    var reader = command.ExecuteReader();
-
-                    if (reader.Read())
+                    using (var reader = command.ExecuteReader())
                     {
-                        
-                        return new User
+                        if (reader.Read())
                         {
-                            Username = reader["Username"].ToString(),
-                            Password = reader["Password"].ToString(),
-                            Role = reader["Role"].ToString()
-                        };
+                            return new User
+                            {
+                                Username = reader["Username"].ToString(),
+                                Password = reader["Password"].ToString(),
+                                Role = reader["Role"].ToString()
+                            };
+                        }
                     }
                 }
             }
-            
+
             return null;
         }
-   }
+    }
 }

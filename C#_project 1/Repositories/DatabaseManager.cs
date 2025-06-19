@@ -12,14 +12,14 @@ namespace UnicomTICManagementSystem.Repositories
         public static void CreateTables()
         {
             using (var conn = Database.GetConnection())
-            {               
-
+            {
+                conn.Open();
                 string createTables = @"
                     CREATE TABLE IF NOT EXISTS Users (
-                        user_id INTEGER PRIMARY KEY AUTOINCREMENT,
-                        username TEXT NOT NULL,
-                        password TEXT NOT NULL,
-                        role TEXT
+                        Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        Role TEXT NOT NULL,
+                        Username TEXT NOT NULL UNIQUE,
+                        Password TEXT NOT NULL
                     );
 
                     CREATE TABLE IF NOT EXISTS Courses (
@@ -77,27 +77,28 @@ namespace UnicomTICManagementSystem.Repositories
                         Address TEXT NOT NULL,
                         NIC TEXT NOT NULL
                     );
+
                     CREATE TABLE IF NOT EXISTS Staff (
-                    Id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    Name TEXT NOT NULL,
-                    Address TEXT NOT NULL,
-                    NIC TEXT NOT NULL
-                    
+                        Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        Name TEXT NOT NULL,
+                        Address TEXT NOT NULL,
+                        NIC TEXT NOT NULL
                     );
+
                     CREATE TABLE IF NOT EXISTS Lecturer (
-                    Id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    Name TEXT NOT NULL,
-                    Address TEXT NOT NULL,
-                    NIC TEXT NOT NULL,
-                    subject_id INTEGER,
-                    FOREIGN KEY(subject_id) REFERENCES Subjects(subject_id)
-                     );
-                    
-                   CREATE TABLE IF NOT EXISTS Teachers (
-                    Id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    Name TEXT NOT NULL,
-                    Address TEXT NOT NULL,
-                     NIC TEXT NOT NULL
+                        Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        Name TEXT NOT NULL,
+                        Address TEXT NOT NULL,
+                        NIC TEXT NOT NULL,
+                        subject_id INTEGER,
+                        FOREIGN KEY(subject_id) REFERENCES Subjects(subject_id)
+                    );
+
+                    CREATE TABLE IF NOT EXISTS Teachers (
+                        Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        Name TEXT NOT NULL,
+                        Address TEXT NOT NULL,
+                        NIC TEXT NOT NULL
                     );
                 ";
 
@@ -106,7 +107,66 @@ namespace UnicomTICManagementSystem.Repositories
                     cmd.ExecuteNonQuery();
                 }
             }
-        }
 
+            /* using (var conn = Database.GetConnection())
+             {
+                 conn.Open();
+                 // Insert initial users only if table is empty
+                 string checkUsersExist = "SELECT COUNT(*) FROM Users;";
+                 using (var checkCmd = new SQLiteCommand(checkUsersExist, conn))
+                 {
+                      long userCount = (long)checkCmd.ExecuteScalar();
+                      if (userCount == 0)
+                      {
+
+
+                         string[] insertQueries = new string[]
+                         {
+                             "INSERT INTO Users (Role, Username, Password) VALUES ('Admin', 'admin', 'admin@123')",
+                             "INSERT INTO Users (Role, Username, Password) VALUES ('Lecture', 'lecture', 'lecture@123')",
+                             "INSERT INTO Users (Role, Username, Password) VALUES ('Staff', 'staff', 'staff@123')",
+                             "INSERT INTO Users (Role, Username, Password) VALUES ('Student', 'student', 'student@123')"
+                         };
+
+                         foreach (var query in insertQueries)
+                         {
+                             using (var insertCmd = new SQLiteCommand(query, conn))
+                             {
+                                 insertCmd.ExecuteNonQuery();
+                             }
+                         }
+                      }
+                 }
+             }*/
+
+            using (var conn = Database.GetConnection())
+            {
+                conn.Open();
+                // Insert initial users only if table is empty
+                string checkUsersExist = "SELECT COUNT(*) FROM Users;";
+                using (var checkCmd = new SQLiteCommand(checkUsersExist, conn))
+                {
+                    long userCount = (long)checkCmd.ExecuteScalar();
+                    if (userCount == 0)
+                    {
+                        string[] roles = { "Admin", "Lecture", "Staff", "Student" };
+                        string[] usernames = { "admin", "lecture", "staff", "student" };
+                        string[] passwords = { "admin@123", "lecture@123", "staff@123", "student@123" };
+
+                        for (int i = 0; i < roles.Length; i++)
+                        {
+                            string insertQuery = "INSERT INTO Users (Role, Username, Password) VALUES (@role, @username, @password)";
+                            using (var insertCmd = new SQLiteCommand(insertQuery, conn))
+                            {
+                                insertCmd.Parameters.AddWithValue("@role", roles[i]);
+                                insertCmd.Parameters.AddWithValue("@username", usernames[i]);
+                                insertCmd.Parameters.AddWithValue("@password", passwords[i]);
+                                insertCmd.ExecuteNonQuery();
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
