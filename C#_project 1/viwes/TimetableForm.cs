@@ -84,5 +84,10 @@ namespace C__project_1.viwes
                 })
                 .ToList();
                 }
+
+        private void cmbSubject_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
+    }
 }
