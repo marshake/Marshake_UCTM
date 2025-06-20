@@ -42,6 +42,7 @@
             this.txt_course = new System.Windows.Forms.Label();
             this.back_student = new System.Windows.Forms.Button();
             this.cmb_coure = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.student_grw)).BeginInit();
             this.SuspendLayout();
             // 
@@ -188,12 +189,25 @@
             this.cmb_coure.TabIndex = 17;
             this.cmb_coure.SelectedIndexChanged += new System.EventHandler(this.cmb_coure_SelectedIndexChanged);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.LightGray;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(144, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(285, 20);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "STUDENT MANAGMENT SYSTEM";
+            // 
             // Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(584, 411);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.cmb_coure);
             this.Controls.Add(this.back_student);
             this.Controls.Add(this.txt_course);
@@ -233,5 +247,6 @@
         private System.Windows.Forms.Label txt_course;
         private System.Windows.Forms.Button back_student;
         private System.Windows.Forms.ComboBox cmb_coure;
+        private System.Windows.Forms.Label label3;
     }
 }

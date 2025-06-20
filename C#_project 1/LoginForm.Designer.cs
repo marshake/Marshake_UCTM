@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -36,21 +35,8 @@
             this.TXT_PASSWORD = new System.Windows.Forms.TextBox();
             this.BTN_LOGIN = new System.Windows.Forms.Button();
             this.cmb_role = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(78, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(390, 19);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "WELLCOME TO UNICOME TIC LOGIN SYSTEM";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -103,13 +89,15 @@
             // 
             // BTN_LOGIN
             // 
+            this.BTN_LOGIN.BackColor = System.Drawing.Color.Lavender;
             this.BTN_LOGIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_LOGIN.ForeColor = System.Drawing.Color.Red;
             this.BTN_LOGIN.Location = new System.Drawing.Point(335, 252);
             this.BTN_LOGIN.Name = "BTN_LOGIN";
             this.BTN_LOGIN.Size = new System.Drawing.Size(75, 23);
             this.BTN_LOGIN.TabIndex = 7;
             this.BTN_LOGIN.Text = "LOGIN";
-            this.BTN_LOGIN.UseVisualStyleBackColor = true;
+            this.BTN_LOGIN.UseVisualStyleBackColor = false;
             this.BTN_LOGIN.Click += new System.EventHandler(this.BTN_LOGIN_Click);
             // 
             // cmb_role
@@ -121,12 +109,25 @@
             this.cmb_role.TabIndex = 8;
             this.cmb_role.SelectedIndexChanged += new System.EventHandler(this.cmb_role_SelectedIndexChanged);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.MintCream;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Maroon;
+            this.label4.Location = new System.Drawing.Point(72, 28);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(393, 20);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "WELLCOME TO UNICOME TIC LOGIN SYSTEM";
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(540, 340);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.cmb_role);
             this.Controls.Add(this.BTN_LOGIN);
             this.Controls.Add(this.TXT_PASSWORD);
@@ -134,7 +135,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
             this.Name = "LoginForm";
             this.Text = "LoginForm";
             this.Load += new System.EventHandler(this.LoginForm_Load);
@@ -144,8 +144,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -153,5 +151,6 @@
         private System.Windows.Forms.TextBox TXT_PASSWORD;
         private System.Windows.Forms.Button BTN_LOGIN;
         private System.Windows.Forms.ComboBox cmb_role;
+        private System.Windows.Forms.Label label4;
     }
 }

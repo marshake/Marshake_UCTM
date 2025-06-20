@@ -20,3 +20,25 @@ C:\Users\UT010314\Desktop\18.06.2025 changed\Marshake_UCTM\C#_project 1\bin\Debu
 C:\Users\UT010314\Desktop\18.06.2025 changed\Marshake_UCTM\C#_project 1\bin\Debug\System.Data.SQLite.dll
 C:\Users\UT010314\Desktop\18.06.2025 changed\Marshake_UCTM\C#_project 1\bin\Debug\System.Data.SQLite.xml
 C:\Users\UT010314\Desktop\18.06.2025 changed\Marshake_UCTM\C#_project 1\obj\Debug\C__proje.9F86BB3E.Up2Date
+Z:\C# Big\new\Marshake_UCTM\C#_project 1\bin\Debug\C#_project 1.exe.config
+Z:\C# Big\new\Marshake_UCTM\C#_project 1\bin\Debug\C#_project 1.exe
+Z:\C# Big\new\Marshake_UCTM\C#_project 1\bin\Debug\C#_project 1.pdb
+Z:\C# Big\new\Marshake_UCTM\C#_project 1\bin\Debug\System.Data.SQLite.dll
+Z:\C# Big\new\Marshake_UCTM\C#_project 1\bin\Debug\System.Data.SQLite.xml
+Z:\C# Big\new\Marshake_UCTM\C#_project 1\obj\Debug\C__project_1.csproj.AssemblyReference.cache
+Z:\C# Big\new\Marshake_UCTM\C#_project 1\obj\Debug\C__project_1.Properties.Resources.resources
+Z:\C# Big\new\Marshake_UCTM\C#_project 1\obj\Debug\C__project_1.Views.LoginForm.resources
+Z:\C# Big\new\Marshake_UCTM\C#_project 1\obj\Debug\C__project_1.viwes.Admin.resources
+Z:\C# Big\new\Marshake_UCTM\C#_project 1\obj\Debug\C__project_1.viwes.Course___Subject.resources
+Z:\C# Big\new\Marshake_UCTM\C#_project 1\obj\Debug\C__project_1.viwes.DashBoard.resources
+Z:\C# Big\new\Marshake_UCTM\C#_project 1\obj\Debug\C__project_1.viwes.Exam.resources
+Z:\C# Big\new\Marshake_UCTM\C#_project 1\obj\Debug\C__project_1.viwes.Lecturer.resources
+Z:\C# Big\new\Marshake_UCTM\C#_project 1\obj\Debug\C__project_1.viwes.Staff.resources
+Z:\C# Big\new\Marshake_UCTM\C#_project 1\obj\Debug\C__project_1.viwes.Student.resources
+Z:\C# Big\new\Marshake_UCTM\C#_project 1\obj\Debug\C__project_1.viwes.Teacher.resources
+Z:\C# Big\new\Marshake_UCTM\C#_project 1\obj\Debug\C__project_1.viwes.TimetableForm.resources
+Z:\C# Big\new\Marshake_UCTM\C#_project 1\obj\Debug\C__project_1.csproj.GenerateResource.cache
+Z:\C# Big\new\Marshake_UCTM\C#_project 1\obj\Debug\C__project_1.csproj.CoreCompileInputs.cache
+Z:\C# Big\new\Marshake_UCTM\C#_project 1\obj\Debug\C__proje.9F86BB3E.Up2Date
+Z:\C# Big\new\Marshake_UCTM\C#_project 1\obj\Debug\C#_project 1.exe
+Z:\C# Big\new\Marshake_UCTM\C#_project 1\obj\Debug\C#_project 1.pdb

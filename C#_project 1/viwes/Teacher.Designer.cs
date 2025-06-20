@@ -39,6 +39,7 @@
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_Update = new System.Windows.Forms.Button();
             this.btn_back_tec = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Teacher)).BeginInit();
             this.SuspendLayout();
             // 
@@ -150,12 +151,25 @@
             this.btn_back_tec.UseVisualStyleBackColor = false;
             this.btn_back_tec.Click += new System.EventHandler(this.btn_back_tec_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label4.Location = new System.Drawing.Point(199, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(269, 18);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "TEACHER MANAGMENT SYSTEM";
+            // 
             // Teacher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(691, 450);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btn_back_tec);
             this.Controls.Add(this.btn_Update);
             this.Controls.Add(this.btn_delete);
@@ -189,5 +203,6 @@
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_Update;
         private System.Windows.Forms.Button btn_back_tec;
+        private System.Windows.Forms.Label label4;
     }
 }
