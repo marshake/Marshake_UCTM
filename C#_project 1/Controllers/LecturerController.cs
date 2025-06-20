@@ -1,4 +1,5 @@
 ﻿using C__project_1.Repositories;
+using C__project_1.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace C__project_1.Controllers
 {
     internal class LecturerController
     {
-        public void AddLecturer(Models.Lecturer lecturer)
+        public void AddLecturer(Lecture lecturer)
         {
             using (var conn = Database.GetConnection())
             {
@@ -26,9 +27,9 @@ namespace C__project_1.Controllers
             }
         }
 
-        public List<Models.Lecturer> GetAllLecturers()
+        public List<Lecture> GetAllLecturers()
         {
-            List<Models.Lecturer> lecturers = new List<Models.Lecturer>();
+            List<Lecture> lecturers = new List<Lecture>();
             using (var conn = Database.GetConnection())
             {
                 conn.Open();  // Open connection
@@ -41,7 +42,7 @@ namespace C__project_1.Controllers
                     {
                         while (reader.Read())
                         {
-                            lecturers.Add(new Models.Lecturer
+                            lecturers.Add(new Lecture
                             {
                                 Id = reader.GetInt32(0),
                                 Name = reader.GetString(1),
@@ -55,7 +56,7 @@ namespace C__project_1.Controllers
             return lecturers;
         }
 
-        public void UpdateLecturer(Models.Lecturer lecturer)
+        public void UpdateLecturer(Lecture lecturer)
         {
             using (var conn = Database.GetConnection())
             {

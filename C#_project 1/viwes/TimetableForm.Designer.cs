@@ -36,6 +36,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.gridTimetables = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridTimetables)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,11 +109,23 @@
             this.gridTimetables.Size = new System.Drawing.Size(322, 150);
             this.gridTimetables.TabIndex = 7;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.IndianRed;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(238, 28);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(134, 25);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "TimeTables";
+            // 
             // TimetableForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 411);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.gridTimetables);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label3);
@@ -140,5 +153,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridView gridTimetables;
+        private System.Windows.Forms.Label label4;
     }
 }

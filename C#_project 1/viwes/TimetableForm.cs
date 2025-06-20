@@ -42,26 +42,34 @@ namespace C__project_1.viwes
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (cmbSubject.SelectedValue != null && cmbRoom.SelectedValue != null && !string.IsNullOrWhiteSpace(txtTimeSlot.Text))
+            /*if ( HideRole.role == "Student")
             {
-                var timetable = new Timetable
-                {
-                    SubjectID = Convert.ToInt32(cmbSubject.SelectedValue),
-                    TimeSlot = txtTimeSlot.Text.Trim(),
-                    RoomID = Convert.ToInt32(cmbRoom.SelectedValue)
-                };
+                btnAdd.Visible = false;
+            }*/
 
-                controller.AddTimetable(timetable);
+        
 
-                MessageBox.Show("Timetable entry added successfully!");
-                txtTimeSlot.Clear();
-                LoadTimetables();
-            }
-            else
+
+                if (cmbSubject.SelectedValue != null && cmbRoom.SelectedValue != null && !string.IsNullOrWhiteSpace(txtTimeSlot.Text))
+        {
+            var timetable = new Timetable
             {
-                MessageBox.Show("Please fill all fields before adding.");
-            }
+                SubjectID = Convert.ToInt32(cmbSubject.SelectedValue),
+                TimeSlot = txtTimeSlot.Text.Trim(),
+                RoomID = Convert.ToInt32(cmbRoom.SelectedValue)
+            };
+
+            controller.AddTimetable(timetable);
+
+            MessageBox.Show("Timetable entry added successfully!");
+            txtTimeSlot.Clear();
+            LoadTimetables();
         }
+        else
+        {
+            MessageBox.Show("Please fill all fields before adding.");
+        }
+}
 
         private void LoadTimetables()
         {
@@ -75,6 +83,6 @@ namespace C__project_1.viwes
                     Room = t.Room
                 })
                 .ToList();
+                }
         }
-    }
 }

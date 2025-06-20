@@ -51,7 +51,7 @@ namespace C__project_1.viwes
                 return;
             }
 
-            var lecturer = new Models.Lecturer
+            var lecturer = new Lecture
             {
                 Name = txt_letc_name.Text,
                 Address = txt_letc_addres.Text,
@@ -85,7 +85,7 @@ namespace C__project_1.viwes
                 return;
             }
 
-            var lecturer = new Models.Lecturer
+            var lecturer = new Lecture
             {
                 Id = Convert.ToInt32(UpdateLecturerId),
                 Name = txt_letc_name.Text,

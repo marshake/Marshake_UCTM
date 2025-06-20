@@ -60,7 +60,6 @@
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\TeacherController.cs" />
     <Compile Include="Controllers\TimetableController.cs" />
-    <Compile Include="C__project_1\Models\Lecturer.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Exam.cs" />
     <Compile Include="Models\HideRole.cs" />

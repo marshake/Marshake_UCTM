@@ -8,5 +8,6 @@ namespace C__project_1.Controler
 {
     internal class CourseController
     {
+
     }
 }

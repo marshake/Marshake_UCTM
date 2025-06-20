@@ -6,16 +6,10 @@ using System.Threading.Tasks;
 
 namespace C__project_1.Models
 {
-    public class Timetable
+    internal class TimetableViewModel
     {
-
-
-        public int TimetableID { get; set; }
-        public int SubjectID { get; set; }
+        public string Subject { get; set; }
         public string TimeSlot { get; set; }
-        public int RoomID { get; internal set; }
+        public string Room { get; set; }
     }
 }
-
-    
-

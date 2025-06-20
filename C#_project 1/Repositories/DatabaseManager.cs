@@ -4,154 +4,147 @@ using System.Collections.Generic;
 using System.Data.SQLite;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace UnicomTICManagementSystem.Repositories
 {
+
     public static class DatabaseManager
     {
         public static void CreateTables()
         {
+            string createTables = @"               
+
+                CREATE TABLE IF NOT EXISTS Users (
+                    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    Role TEXT NOT NULL,
+                    Username TEXT NOT NULL UNIQUE,
+                    Password TEXT NOT NULL
+                );
+
+                CREATE TABLE IF NOT EXISTS Courses (
+                    CourseID INTEGER PRIMARY KEY AUTOINCREMENT,
+                    CourseName TEXT NOT NULL,
+                    Department TEXT
+                );
+
+                CREATE TABLE IF NOT EXISTS Subjects (
+                    SubjectID INTEGER PRIMARY KEY AUTOINCREMENT,
+                    SubjectName TEXT NOT NULL,
+                    CourseID INTEGER,
+                    FOREIGN KEY(CourseID) REFERENCES Courses(CourseID)
+                );
+
+                CREATE TABLE IF NOT EXISTS Exams (
+                    ExamID INTEGER PRIMARY KEY AUTOINCREMENT,
+                    SubjectID INTEGER,
+                    ExamDate TEXT,
+                    RoomID INTEGER,
+                    FOREIGN KEY(SubjectID) REFERENCES Subjects(SubjectID),
+                    FOREIGN KEY(RoomID) REFERENCES Rooms(RoomID)
+                );
+
+                CREATE TABLE IF NOT EXISTS Marks (
+                    MarkID INTEGER PRIMARY KEY AUTOINCREMENT,
+                    StudentID INTEGER,
+                    ExamID INTEGER,
+                    MarksObtained INTEGER,
+                    FOREIGN KEY(StudentID) REFERENCES Students(Id),
+                    FOREIGN KEY(ExamID) REFERENCES Exams(ExamID)
+                );
+
+                CREATE TABLE IF NOT EXISTS Rooms (
+                    RoomID INTEGER PRIMARY KEY AUTOINCREMENT,
+                    RoomName TEXT NOT NULL,
+                    RoomType TEXT NOT NULL 
+                );
+
+                CREATE TABLE IF NOT EXISTS Timetables (
+                    TimetableID INTEGER PRIMARY KEY AUTOINCREMENT,
+                    SubjectID INTEGER,
+                    TimeSlot TEXT,
+                    RoomID INTEGER,
+                    FOREIGN KEY(SubjectID) REFERENCES Subjects(SubjectID),
+                    FOREIGN KEY(RoomID) REFERENCES Rooms(RoomID)
+                );
+
+                CREATE TABLE IF NOT EXISTS Students (
+                    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    Name TEXT NOT NULL,
+                    Address TEXT NOT NULL,
+                    NIC TEXT NOT NULL
+                );
+
+                CREATE TABLE IF NOT EXISTS Staff (
+                    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    Name TEXT NOT NULL,
+                    Address TEXT NOT NULL,
+                    NIC TEXT NOT NULL
+                );
+
+                CREATE TABLE IF NOT EXISTS Lecturer (
+                    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    Name TEXT NOT NULL,
+                    Address TEXT NOT NULL,
+                    NIC TEXT NOT NULL,
+                    SubjectID INTEGER,
+                    FOREIGN KEY(SubjectID) REFERENCES Subjects(SubjectID)
+                );
+
+                CREATE TABLE IF NOT EXISTS Teachers (
+                    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    Name TEXT NOT NULL,
+                    Address TEXT NOT NULL,
+                    NIC TEXT NOT NULL
+                );
+            ";
+
+            string insertSampleData = @"
+                INSERT OR IGNORE INTO Courses (CourseID, CourseName, Department) VALUES (1, 'BSc Computer Science', 'IT');
+
+                INSERT OR IGNORE INTO Subjects (SubjectID, SubjectName, CourseID) VALUES (1, 'Programming', 1);
+                INSERT OR IGNORE INTO Subjects (SubjectID, SubjectName, CourseID) VALUES (2, 'Math', 1);
+                INSERT OR IGNORE INTO Subjects (SubjectID, SubjectName, CourseID) VALUES (3, 'physics', 1);
+                INSERT OR IGNORE INTO Subjects (SubjectID, SubjectName, CourseID) VALUES (4, 'software devolpment', 1);
+
+                INSERT OR IGNORE INTO Rooms (RoomID, RoomName, RoomType) VALUES (1, 'Lab 1', 'Lab');
+                
+                INSERT OR IGNORE INTO Rooms (RoomID, RoomName, RoomType) VALUES (2, 'Lab 2', 'Lab');
+                INSERT OR IGNORE INTO Rooms (RoomID, RoomName, RoomType) VALUES (3, 'Lab 3', 'Lab');
+                INSERT OR IGNORE INTO Rooms (RoomID, RoomName, RoomType) VALUES (4, 'Hall A', 'Hall');
+                INSERT OR IGNORE INTO Rooms (RoomID, RoomName, RoomType) VALUES (5, 'Hall B', 'Hall');
+                INSERT OR IGNORE INTO Rooms (RoomID, RoomName, RoomType) VALUES (6, 'Hall c', 'Hall');
+                
+            ";
+
+
+
             using (var conn = Database.GetConnection())
-            {
+            {                
                 conn.Open();
-                string createTables = @"
-                    CREATE TABLE IF NOT EXISTS Users (
-                        Id INTEGER PRIMARY KEY AUTOINCREMENT,
-                        Role TEXT NOT NULL,
-                        Username TEXT NOT NULL UNIQUE,
-                        Password TEXT NOT NULL
-                    );
 
-                    CREATE TABLE IF NOT EXISTS Courses (
-                        course_id INTEGER PRIMARY KEY AUTOINCREMENT,
-                        course_name TEXT NOT NULL,
-                        department TEXT
-                    );
-
-                    CREATE TABLE IF NOT EXISTS Subjects (
-                        subject_id INTEGER PRIMARY KEY AUTOINCREMENT,
-                        subject_name TEXT NOT NULL,
-                        course_id INTEGER,
-                        FOREIGN KEY(course_id) REFERENCES Courses(course_id)
-                    );
-
-                    CREATE TABLE IF NOT EXISTS Exams (
-                        exam_id INTEGER PRIMARY KEY AUTOINCREMENT,
-                        subject_id INTEGER,
-                        exam_date TEXT,
-                        room_id INTEGER,
-                        FOREIGN KEY(subject_id) REFERENCES Subjects(subject_id),
-                        FOREIGN KEY(room_id) REFERENCES Rooms(room_id)
-                    );
-
-                    CREATE TABLE IF NOT EXISTS Marks (
-                        mark_id INTEGER PRIMARY KEY AUTOINCREMENT,
-                        student_id INTEGER,
-                        exam_id INTEGER,
-                        marks_obtained INTEGER,
-                        FOREIGN KEY(student_id) REFERENCES Students(Id),
-                        FOREIGN KEY(exam_id) REFERENCES Exams(exam_id)
-                    );
-
-                    CREATE TABLE IF NOT EXISTS Rooms (
-                        room_id INTEGER PRIMARY KEY AUTOINCREMENT,
-                        room_name TEXT NOT NULL,
-                        capacity INTEGER
-                    );
-
-                    CREATE TABLE IF NOT EXISTS Timetables (
-                        timetable_id INTEGER PRIMARY KEY AUTOINCREMENT,
-                        course_id INTEGER,
-                        subject_id INTEGER,
-                        day TEXT,
-                        time TEXT,
-                        room_id INTEGER,
-                        FOREIGN KEY(course_id) REFERENCES Courses(course_id),
-                        FOREIGN KEY(subject_id) REFERENCES Subjects(subject_id),
-                        FOREIGN KEY(room_id) REFERENCES Rooms(room_id)
-                    );
-
-                    CREATE TABLE IF NOT EXISTS Students (
-                        Id INTEGER PRIMARY KEY AUTOINCREMENT,
-                        Name TEXT NOT NULL,
-                        Address TEXT NOT NULL,
-                        NIC TEXT NOT NULL
-                    );
-
-                    CREATE TABLE IF NOT EXISTS Staff (
-                        Id INTEGER PRIMARY KEY AUTOINCREMENT,
-                        Name TEXT NOT NULL,
-                        Address TEXT NOT NULL,
-                        NIC TEXT NOT NULL
-                    );
-
-                    CREATE TABLE IF NOT EXISTS Lecturer (
-                        Id INTEGER PRIMARY KEY AUTOINCREMENT,
-                        Name TEXT NOT NULL,
-                        Address TEXT NOT NULL,
-                        NIC TEXT NOT NULL,
-                        subject_id INTEGER,
-                        FOREIGN KEY(subject_id) REFERENCES Subjects(subject_id)
-                    );
-
-                    CREATE TABLE IF NOT EXISTS Teachers (
-                        Id INTEGER PRIMARY KEY AUTOINCREMENT,
-                        Name TEXT NOT NULL,
-                        Address TEXT NOT NULL,
-                        NIC TEXT NOT NULL
-                    );
-                ";
-
+                // Step 1: Create Tables
                 using (var cmd = new SQLiteCommand(createTables, conn))
                 {
                     cmd.ExecuteNonQuery();
                 }
-            }
 
-            /* using (var conn = Database.GetConnection())
-             {
-                 conn.Open();
-                 // Insert initial users only if table is empty
-                 string checkUsersExist = "SELECT COUNT(*) FROM Users;";
-                 using (var checkCmd = new SQLiteCommand(checkUsersExist, conn))
-                 {
-                      long userCount = (long)checkCmd.ExecuteScalar();
-                      if (userCount == 0)
-                      {
+                // Step 2: Insert Sample Data
+                using (var cmd = new SQLiteCommand(insertSampleData, conn))
+                {
+                    cmd.ExecuteNonQuery();
+                }
 
-
-                         string[] insertQueries = new string[]
-                         {
-                             "INSERT INTO Users (Role, Username, Password) VALUES ('Admin', 'admin', 'admin@123')",
-                             "INSERT INTO Users (Role, Username, Password) VALUES ('Lecture', 'lecture', 'lecture@123')",
-                             "INSERT INTO Users (Role, Username, Password) VALUES ('Staff', 'staff', 'staff@123')",
-                             "INSERT INTO Users (Role, Username, Password) VALUES ('Student', 'student', 'student@123')"
-                         };
-
-                         foreach (var query in insertQueries)
-                         {
-                             using (var insertCmd = new SQLiteCommand(query, conn))
-                             {
-                                 insertCmd.ExecuteNonQuery();
-                             }
-                         }
-                      }
-                 }
-             }*/
-
-            using (var conn = Database.GetConnection())
-            {
-                conn.Open();
-                // Insert initial users only if table is empty
+                // Step 3: Insert default users if not exist
                 string checkUsersExist = "SELECT COUNT(*) FROM Users;";
                 using (var checkCmd = new SQLiteCommand(checkUsersExist, conn))
                 {
                     long userCount = (long)checkCmd.ExecuteScalar();
                     if (userCount == 0)
                     {
-                        string[] roles = { "Admin", "Lecture", "Staff", "Student" };
-                        string[] usernames = { "admin", "lecture", "staff", "student" };
-                        string[] passwords = { "admin@123", "lecture@123", "staff@123", "student@123" };
+                        string[] roles = { "Admin", "Lecturer", "Staff", "Student" };
+                        string[] usernames = { "admin", "lecturer", "staff", "student" };
+                        string[] passwords = { "admin@123", "lecturer@123", "staff@123", "student@123" };
 
                         for (int i = 0; i < roles.Length; i++)
                         {
@@ -170,3 +163,5 @@ namespace UnicomTICManagementSystem.Repositories
         }
     }
 }
+
+

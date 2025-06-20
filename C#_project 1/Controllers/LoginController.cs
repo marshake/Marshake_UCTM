@@ -1,5 +1,4 @@
-﻿using C__project_1.Models;
-using C__project_1.Repositories;
+﻿using C__project_1.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
@@ -8,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
 using System.Data;
+using C__project_1.Models;
 
 namespace C__project_1.Controler
 {

@@ -114,3 +114,5 @@ Z:\C# Big\18.06.2025 changed\Marshake_UCTM\C#_project 1\obj\Debug\UnicomTI.449BF
 Z:\C# Big\18.06.2025 changed\Marshake_UCTM\C#_project 1\obj\Debug\C#_project 1.exe
 Z:\C# Big\18.06.2025 changed\Marshake_UCTM\C#_project 1\obj\Debug\C#_project 1.pdb
 Z:\C# Big\18.06.2025 changed\Marshake_UCTM\C#_project 1\obj\Debug\C__project_1.viwes.TimetableForm.resources
+C:\Users\UT010314\Desktop\18.06.2025 changed\Marshake_UCTM\C#_project 1\obj\Debug\C__project_1.viwes.Exam.resources
+C:\Users\UT010314\Desktop\18.06.2025 changed\Marshake_UCTM\C#_project 1\obj\Debug\C__project_1.viwes.TimetableForm.resources
