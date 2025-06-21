@@ -59,12 +59,12 @@ namespace C__project_1.viwes
 
             MessageBox.Show("Student deleted successfully.");
 
-            // Clear form
+            
             txt_studentname.Text = "";
             txt_studentAddress.Text = "";
             txt_studentNIC.Text = "";
 
-            // Refresh grid
+            
             student_grw.DataSource = controller.GetAllStudents();
         }
 

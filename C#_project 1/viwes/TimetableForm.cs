@@ -42,10 +42,7 @@ namespace C__project_1.viwes
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            /*if ( HideRole.role == "Student")
-            {
-                btnAdd.Visible = false;
-            }*/
+           
 
         
 

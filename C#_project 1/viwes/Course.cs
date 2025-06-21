@@ -35,6 +35,11 @@ namespace C__project_1.viwes
         {
 
         }
+
+        private void Course___Subject_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

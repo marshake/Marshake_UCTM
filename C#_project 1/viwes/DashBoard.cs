@@ -24,7 +24,7 @@ namespace C__project_1.viwes
         public DashBoard(User user)
         {
             InitializeComponent();
-            currentUser = user; // ✅ Fix: use the parameter, not the property
+            currentUser = user; 
             SetButtonAccessBasedOnRole();
             HideRole.role = user.Role;
         }
@@ -38,12 +38,12 @@ namespace C__project_1.viwes
             btn_Exam.Enabled = false;
             btn_marks.Enabled = false;
             btn_tt.Enabled = false;
-            button1.Enabled = false; // Course button (assuming button1 = btn_course)
+            button1.Enabled = false; 
             
             switch (currentUser.Role)
             {
                 case "Admin":
-                    // Admin can do everything
+                    
                     btn_student.Enabled = true;
                     btn_staff.Enabled = true;
                     btn_lecture.Enabled = true;
@@ -100,7 +100,7 @@ namespace C__project_1.viwes
             if (form != null)
             {
                 form.TopLevel = false;
-                form.FormBorderStyle = FormBorderStyle.None;  // remove borders to fit nicely
+                form.FormBorderStyle = FormBorderStyle.None;  
                 form.Dock = DockStyle.Fill;
                 this.mainpanel.Controls.Add(form);
                 this.mainpanel.Tag = form;

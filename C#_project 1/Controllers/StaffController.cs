@@ -13,7 +13,7 @@ namespace C__project_1.Controllers
         {
             using (var conn = Database.GetConnection())
             {
-                conn.Open();  // Open connection
+                conn.Open();  
 
                 using (var cmd = conn.CreateCommand())
                 {
@@ -31,7 +31,7 @@ namespace C__project_1.Controllers
             List<Models.Staff> staffList = new List<Models.Staff>();
             using (var conn = Database.GetConnection())
             {
-                conn.Open();  // Open connection
+                conn.Open();  
 
                 using (var cmd = conn.CreateCommand())
                 {
@@ -59,7 +59,7 @@ namespace C__project_1.Controllers
         {
             using (var conn = Database.GetConnection())
             {
-                conn.Open();  // Open connection
+                conn.Open();  
 
                 using (var cmd = conn.CreateCommand())
                 {
@@ -77,7 +77,7 @@ namespace C__project_1.Controllers
         {
             using (var conn = Database.GetConnection())
             {
-                conn.Open();  // Open connection
+                conn.Open();  
 
                 using (var cmd = conn.CreateCommand())
                 {

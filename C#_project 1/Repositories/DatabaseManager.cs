@@ -123,19 +123,19 @@ namespace UnicomTICManagementSystem.Repositories
             {                
                 conn.Open();
 
-                // Step 1: Create Tables
+                
                 using (var cmd = new SQLiteCommand(createTables, conn))
                 {
                     cmd.ExecuteNonQuery();
                 }
 
-                // Step 2: Insert Sample Data
+                
                 using (var cmd = new SQLiteCommand(insertSampleData, conn))
                 {
                     cmd.ExecuteNonQuery();
                 }
 
-                // Step 3: Insert default users if not exist
+                
                 string checkUsersExist = "SELECT COUNT(*) FROM Users;";
                 using (var checkCmd = new SQLiteCommand(checkUsersExist, conn))
                 {

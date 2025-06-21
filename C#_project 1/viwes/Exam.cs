@@ -16,5 +16,10 @@ namespace C__project_1.viwes
         {
             InitializeComponent();
         }
+
+        private void Exam_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

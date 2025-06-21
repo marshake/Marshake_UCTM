@@ -63,18 +63,18 @@ namespace C__project_1.viwes
 
             MessageBox.Show("Lecturer added successfully.");
 
-            // Clear form
+            
             txt_letc_name.Text = "";
             txt_letc_addres.Text = "";
             txt_letc_nic.Text = "";
 
-            // Refresh grid
+            
             dgv_lecturer.DataSource = controller.GetAllLecturers();
         }
 
         private void txt_letc_nic_TextChanged(object sender, EventArgs e)
         {
-            // You can implement validation or other logic here
+            
         }
 
         private void btn_update_lect_Click(object sender, EventArgs e)
@@ -118,12 +118,12 @@ namespace C__project_1.viwes
 
             MessageBox.Show("Lecturer deleted successfully.");
 
-            // Clear form
+            
             txt_letc_name.Text = "";
             txt_letc_addres.Text = "";
             txt_letc_nic.Text = "";
 
-            // Refresh grid
+            
             dgv_lecturer.DataSource = controller.GetAllLecturers();
         }
 
@@ -138,7 +138,7 @@ namespace C__project_1.viwes
                 txt_letc_addres.Text = selectedRow.Cells["Address"].Value?.ToString() ?? "";
                 txt_letc_nic.Text = selectedRow.Cells["NIC"].Value?.ToString() ?? "";
 
-                // Set the UpdateStudentId for update/delete operations
+                
                 if (int.TryParse(selectedRow.Cells["Id"].Value?.ToString(), out int id))
                 {
                     UpdateLecturerId = id;

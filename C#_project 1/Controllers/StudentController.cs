@@ -15,7 +15,7 @@ namespace C__project_1.Controler
         {
             using (var conn = Database.GetConnection())
             {
-                conn.Open();  // OPEN CONNECTION
+                conn.Open();  
 
                 using (var cmd = conn.CreateCommand())
                 {
@@ -33,7 +33,7 @@ namespace C__project_1.Controler
             List<Student> students = new List<Student>();
             using (var conn = Database.GetConnection())
             {
-                conn.Open();  // OPEN CONNECTION
+                conn.Open();  
 
                 using (var cmd = conn.CreateCommand())
                 {
@@ -61,7 +61,7 @@ namespace C__project_1.Controler
         {
             using (var conn = Database.GetConnection())
             {
-                conn.Open();  // OPEN CONNECTION
+                conn.Open();  
 
                 using (var cmd = conn.CreateCommand())
                 {
@@ -79,7 +79,7 @@ namespace C__project_1.Controler
         {
             using (var conn = Database.GetConnection())
             {
-                conn.Open();  // OPEN CONNECTION
+                conn.Open();  
 
                 using (var cmd = conn.CreateCommand())
                 {
@@ -91,52 +91,7 @@ namespace C__project_1.Controler
 
 
 
-            /* internal string AddStudent(viwes.Student student)
-             {
-                 throw new NotImplementedException();
-             }
-
-             internal string UpdateStudent(viwes.Student student)
-             {
-                 throw new NotImplementedException();*/
-
-
-
-
-            /*internal class StudentController
-           {
-               // Simulated database
-               private static List<Student> studentList = new List<Student>();
-
-               internal string AddStudent(Student student)
-               {
-                   if (student == null || string.IsNullOrWhiteSpace(student.Name))
-                   {
-                       return "Invalid student data.";
-                   }
-
-                   studentList.Add(student);
-                   return "Student added successfully.";
-               }
-
-               // Optional: to retrieve students
-               internal List<Student> GetAllStudents()
-               {
-                   return studentList;
-               }
-
-               internal string UpdateStudent(Student student)
-               {
-                   // Example update logic
-                   var existing = studentList.Find(s => s.Id == student.Id);
-                   if (existing == null)
-                   {
-                       return "Student not found.";
-                   }
-
-                   existing.Name = student.Name;
-                   existing.Address = student.Address;
-                   return "Student updated successfully.";*/
+           
         }
     }
 }

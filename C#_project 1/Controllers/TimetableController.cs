@@ -34,7 +34,7 @@ namespace C__project_1.Controler
             return subjects;
         }
 
-        // Method to get all rooms for ComboBox
+        
         public List<Room> GetAllRooms()
         {
             List<Room> rooms = new List<Room>();
@@ -59,7 +59,7 @@ namespace C__project_1.Controler
             return rooms;
         }
 
-        // ✅ Method to Add Timetable
+       
         public void AddTimetable(Timetable timetable)
         {
             using (var connection = Database.GetConnection())
@@ -76,7 +76,7 @@ namespace C__project_1.Controler
             }
         }
 
-        // ✅ Method to Load Timetables with Subject and Room Name
+        
         public List<TimetableViewModel> GetTimetableList()
         {
             List<TimetableViewModel> list = new List<TimetableViewModel>();

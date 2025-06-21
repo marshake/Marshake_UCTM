@@ -46,12 +46,12 @@ namespace C__project_1.viwes
 
             MessageBox.Show("Teacher added successfully.");
 
-            // Clear form
+            
             txt_tec_name.Text = "";
             txt_tec_Address.Text = "";
             txt_tec_NIC.Text = "";
 
-            // Refresh grid
+            
             dgv_Teacher.DataSource = controller.GetAllTeachers();
         }
 
@@ -88,7 +88,7 @@ namespace C__project_1.viwes
                     txt_tec_Address.Text = selectedRow.Cells["Address"].Value?.ToString() ?? "";
                     txt_tec_NIC.Text = selectedRow.Cells["NIC"].Value?.ToString() ?? "";
 
-                    // Set the UpdateStudentId for update/delete operations
+                    
                     if (int.TryParse(selectedRow.Cells["Id"].Value?.ToString(), out int id))
                     {
                         UpdateTeacherId = id;
@@ -114,12 +114,12 @@ namespace C__project_1.viwes
 
             MessageBox.Show("Teacher deleted successfully.");
 
-            // Clear form
+            
             txt_tec_name.Text = "";
             txt_tec_Address.Text = "";
             txt_tec_NIC.Text = "";
 
-            // Refresh grid
+          
             dgv_Teacher.DataSource = controller.GetAllTeachers();
         }
 
@@ -133,7 +133,7 @@ namespace C__project_1.viwes
                 txt_tec_Address.Text = selectedRow.Cells["Address"].Value?.ToString() ?? "";
                 txt_tec_NIC.Text = selectedRow.Cells["NIC"].Value?.ToString() ?? "";
 
-                // Set the UpdateStudentId for update/delete operations
+                
                 if (int.TryParse(selectedRow.Cells["Id"].Value?.ToString(), out int id))
                 {
                     UpdateTeacherId = id;
