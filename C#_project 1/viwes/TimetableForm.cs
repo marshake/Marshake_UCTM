@@ -17,7 +17,12 @@ namespace C__project_1.viwes
         TimetableController controller = new TimetableController();
         public TimetableForm()
         {
-            InitializeComponent();
+            InitializeComponent(); if (HideRole.role == "Student")
+            {
+                btnAdd.Visible = false;
+                
+                
+            }
         }
 
 
